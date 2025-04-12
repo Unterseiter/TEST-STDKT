@@ -1,5 +1,3 @@
-@use 'components/variables' as *;
-@use 'components/mixins' as *;
 @use 'sections/head' as *;
 @use 'sections/contacts' as *;
 @use 'sections/geografy' as *;
@@ -10,6 +8,7 @@
 @use 'sections/traditional' as *;
 @use 'header' as *;
 @use 'footer' as *;
+
 
 
 * {

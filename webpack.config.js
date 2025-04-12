@@ -12,7 +12,8 @@ module.exports = (env, argv) => {
     output: {
       filename: 'bundle.[contenthash].js',
       path: path.resolve(__dirname, 'dist'),
-      clean: true, // Очищать папку dist перед сборкой
+      publicPath: '/', // Ключевая настройка!
+      clean: true,
     },
 
     mode: isProduction ? 'production' : 'development',
@@ -25,33 +26,39 @@ module.exports = (env, argv) => {
 
     module: {
       rules: [
-
         {
           test: /\.s[ac]ss$/i,
           use: [
-            'style-loader',  
-            'css-loader',    
-            'postcss-loader',
-            'sass-loader'    
-          ]
+            'style-loader',
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: [['autoprefixer']],
+                },
+              },
+            },
+            'sass-loader',
+          ],
         },
-
-
         {
-          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
           type: 'asset/resource',
           generator: {
-            filename: 'images/[name][ext]',
+            filename: 'assets/images/[hash][ext][query]', // Изменили путь
           },
         },
-
-
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
           type: 'asset/resource',
           generator: {
-            filename: 'fonts/[name][ext]',
+            filename: 'assets/fonts/[hash][ext][query]',
           },
+        },
+        {
+          test: /\.html$/i, // Добавили html-loader
+          loader: 'html-loader',
         },
       ],
     },
