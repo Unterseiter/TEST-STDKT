@@ -1,11 +1,5 @@
 $primary-color: #3262AC;
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
 .header{
     background-color: $primary-color;
     color: #ffffff;
@@ -21,7 +15,6 @@ $primary-color: #3262AC;
     padding: 0;
     
     &__logo{
-        // background-image: url('../assets/logo.svg');
         height: 100px;
         width: 100px;
         cursor: pointer;
@@ -41,47 +34,4 @@ $primary-color: #3262AC;
         }
     }
     
-}
-
-.sectionHead{
-    padding: 0;
-    height: 700px;
-    background-color: $primary-color;
-    column-count: 2;
-}
-
-.sectionPopular{
-    height: 757px;
-}
-
-.sectionPopular{
-    height: 757px;
-}
-
-.sectionTraditional{
-    height: 778px;
-}
-
-.sectionHit{
-    height: 757px;
-}
-
-.sectionRecipe{
-    height: 682px;
-}
-
-.sectionGeografy{
-    height: 664px;
-}
-
-.sectionContacts{
-    height: 798px;
-}
-
-.sectionMap{
-    height: 550px;
-}
-
-.footer{
-    height: 616px;
 }

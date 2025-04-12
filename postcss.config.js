@@ -1,5 +1,5 @@
 module.exports = {
-    plugins: [
-      require('autoprefixer'), // Добавляет вендорные префиксы
-    ],
-  };
+  plugins: [
+    require('autoprefixer') // Добавляет вендорные префиксы
+  ]
+}
