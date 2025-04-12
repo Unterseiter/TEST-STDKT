@@ -1,4 +1,23 @@
-// зона импорта
-@import 'variables';
+$primary-color: #3262AC;
 
-// стили
+
+.header{
+    background-color: $primary-color;
+    color: #ffffff;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    gap: 50px;
+
+    &__nav{
+        width: 655px;
+        height: 40px;
+
+        &__button{
+            background-color: transparent;
+            border: 0px;
+            color: #ffffff;
+        }
+    }
+}
