@@ -1,0 +1,87 @@
+$primary-color: #3262AC;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.header{
+    background-color: $primary-color;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100px;
+    box-sizing: border-box;
+    gap: 5vw;
+    
+    margin: 0;
+    padding: 0;
+    
+    &__logo{
+        // background-image: url('../assets/logo.svg');
+        height: 100px;
+        width: 100px;
+        cursor: pointer;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 1vw;
+        align-items: center;
+
+        &__button {
+            background-color: transparent;
+            border: 0;
+            color: #ffffff;
+            padding: 10px 20px; // Добавим отступы для кнопок
+            cursor: pointer;
+        }
+    }
+    
+}
+
+.sectionHead{
+    padding: 0;
+    height: 700px;
+    background-color: $primary-color;
+    column-count: 2;
+}
+
+.sectionPopular{
+    height: 757px;
+}
+
+.sectionPopular{
+    height: 757px;
+}
+
+.sectionTraditional{
+    height: 778px;
+}
+
+.sectionHit{
+    height: 757px;
+}
+
+.sectionRecipe{
+    height: 682px;
+}
+
+.sectionGeografy{
+    height: 664px;
+}
+
+.sectionContacts{
+    height: 798px;
+}
+
+.sectionMap{
+    height: 550px;
+}
+
+.footer{
+    height: 616px;
+}
