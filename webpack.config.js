@@ -12,7 +12,7 @@ module.exports = (env, argv) => {
     output: {
       filename: 'bundle.[contenthash].js',
       path: path.resolve(__dirname, 'dist'),
-      publicPath: '/', // Ключевая настройка!
+      publicPath: '/',
       clean: true,
     },
 
@@ -46,7 +46,7 @@ module.exports = (env, argv) => {
           test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
           type: 'asset/resource',
           generator: {
-            filename: 'assets/images/[hash][ext][query]', // Изменили путь
+            filename: 'assets/images/[hash][ext][query]',
           },
         },
         {
@@ -57,7 +57,7 @@ module.exports = (env, argv) => {
           },
         },
         {
-          test: /\.html$/i, // Добавили html-loader
+          test: /\.html$/i,
           loader: 'html-loader',
         },
       ],

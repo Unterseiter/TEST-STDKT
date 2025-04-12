@@ -2,7 +2,13 @@
 
 .sectionHead{
     color: #ffffff;
-    
+    // background-image: url('../assets/images/bgHead.png');
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // width: 100%;
+    // height: 100%;    // иметь ввиду что это изображение которое мы будем устанавливать на фон
+    // opacity: 0.4;
     background: linear-gradient(0deg, #3262AC, #3262AC),
     linear-gradient(180deg, rgba(14, 59, 129, 0.6) 0%, rgba(50, 128, 172, 0.222) 79.02%);
     min-height: 700px;
@@ -11,39 +17,30 @@
     justify-content: center;
     gap: 5vw;
 
-// &__img{
-//     background-image: url('../../assets/backgroundHead.png');
-//     background-size: cover;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     width: 100%;
-//     height: 100%;
-//     opacity: 0.4;
-//     mix-blend-mode: Soft light; //? оставлять или нет
-// }
-    
     &__firstColumn{
         height: 302px;
         width: 433px;
+        transform: translateY(-50px);
 
         &__h1{
             @include h1;
-            
+            margin-bottom: 2vh;
+        }
+
+        &__text{
+            @include text;
+            margin-bottom: 3vh;
         }
     }
 
     &__secondColumn{
         height: 302px;
         width: 433px;
+        transform: translateY(-50px);
     }
 
     &__button{
-    width: 155px;
-    height: 52px;
-    gap: 8px;
-    border-radius: 100px;
-    padding-right: 32px;
-    padding-left: 32px;
-    background: #76B72A;
+    @include buttonGreen;
+
     }
 }

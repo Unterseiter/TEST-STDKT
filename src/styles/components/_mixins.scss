@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @mixin h1 {
     font-family: Clip;
     font-weight: 400;
@@ -15,4 +17,45 @@
     letter-spacing: 0%;
     vertical-align: middle;
 
+}
+
+$baseColor: #76B72A;
+
+@mixin buttonGreen{
+    width: 155px;
+    height: 52px;
+    gap: 8px;
+    border-radius: 100px;
+    padding-right: 32px;
+    padding-left: 32px;
+    background-color: $baseColor;
+    cursor: pointer;
+
+    &--active{
+        background: color.adjust($baseColor, $lightness: -10%);
+    }
+}
+
+@mixin buttonTransparent{
+
+
+$baseColor2: #1C1C1C80;
+
+    // background-color: transparent;
+    // border: 0;
+    // cursor: pointer;
+
+    width: 207px;
+    height: 52px;
+    gap: 8px;
+    border-radius: 100px;
+    border-width: 1px;
+    padding-right: 32px;
+    padding-left: 32px;
+    border: 1px solid ;
+    cursor: pointer;
+
+    &--active{
+        background: color.adjust($baseColor2, $lightness: -10%);
+    }
 }
