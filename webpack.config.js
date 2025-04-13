@@ -27,6 +27,14 @@ module.exports = (env, argv) => {
     module: {
       rules: [
         {
+          test: /\.svg$/i,
+          type: 'asset/resource',
+          generator: {
+            filename: 'assets/images/[name][ext][query]', // Сохранить оригинальные имена
+          },
+        },
+
+        {
           test: /\.s[ac]ss$/i,
           use: [
             'style-loader',

@@ -1,7 +1,101 @@
-.sectionTraditional{
-    width: 90%;
-height: 786px;
-left: 16px;
-background: green;
+@use '../components/mixins' as *;
 
-}
+.sectionTraditional{
+    height: 650px;
+    // left: 16px;
+    border-radius: 60px;
+    background: #76B72A;
+    color: white;
+    margin: 2%;
+    width: 96%;
+    display: flex;
+    columns: 2;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    
+    &__container{
+        width: 550px;
+        height: auto;
+        min-height: 330px;
+        top: 80px;
+        left: 346px;
+        gap: 36px;
+        
+        
+        &__h1{
+            @include h1;
+            margin-bottom: 3vw;
+            font-size: 38px;
+            
+        }
+        
+        &__text{
+            @include text;
+            margin-bottom: 3vw;
+        }
+        
+        &__blockContainer {
+            width: 100%;
+            display: flex;
+            color: black;
+            gap: 20px;
+            justify-content: space-between;
+      
+            &__block {
+                width: 125px;
+                height: 140px;
+                background: white;
+                flex-shrink: 0; 
+                border-radius: 25px;
+                text-align: center;
+                display: grid;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+                
+            }
+
+            &__blockW{
+                width: 250px;
+                height: 140px;
+                background: white;
+                flex-shrink: 0; 
+                border-radius: 25px;
+                text-align: center;
+                display: grid;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+            }
+        }
+    }
+    
+    &__containerImg {
+        position: relative;
+        width: 550px;
+        height: 100%;
+        min-height: 400px;
+    
+        img {
+          position: absolute;
+          max-width: 400px;
+          height: 75%;
+          object-fit: contain;
+        }
+      }
+    
+      &__imageFront {
+        z-index: 2;
+        left: 50px;
+        bottom: 0;
+      }
+    
+      &__imageBack {
+        z-index: 1;
+        right: 50px;
+        bottom: 0;
+      }
+    }
