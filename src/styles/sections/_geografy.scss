@@ -1,3 +1,90 @@
-.sectionGeografy{
-    height: 664px;
+@use '../components/mixins' as *;
+
+.sectionGeografy {
+    height: 550px;
+    border-radius: 60px;
+    background: #3262AC;
+    color: white;
+    margin: 2%;
+    width: 96%;
+    display: flex;
+    columns: 2;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    gap: 2vw;
+
+    &__container {
+        width: 45%;
+        height: 75%;
+        min-height: 330px;
+        gap: 36px;
+        margin-left: 15%;
+
+        &__h1 {
+            @include h1;
+            margin-bottom: 3vw;
+            font-size: 38px;
+        }
+
+        &__text {
+            @include text;
+            margin-bottom: 3vw;
+        }
+
+        &__button {
+            @include buttonTransparent;
+            color: white;
+            border-color: white;
+            margin-bottom: 5vh;
+        }
+
+        &__blockContainer{
+            height: 55%;
+            width: 100%;
+            display: grid;
+            color: black;
+            gap: 5px;
+
+            &__row{
+                display: flex;
+                width: 70%;
+                gap: 5px;
+
+                &__block{
+                    background: white;
+                    width: 23%;
+                    border-radius: 25px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                &__blockDouble{
+                    background: white;
+                    width: 48%;
+                    border-radius: 25px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    &__containerImg {
+        position: relative;
+        width: 60%;
+        height: 100%;
+        min-height: 400px;
+
+        img {
+            position: absolute;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            bottom: 0;
+        }
+    }
 }
