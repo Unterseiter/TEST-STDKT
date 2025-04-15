@@ -1,4 +1,42 @@
+@use './components/mixins' as *;
+
 .footer{
     height: 616px;
     background: #1C1C1C;
+    columns: 4;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__column{
+        width: 20%;
+        height: 80%;
+        margin: 5vw;
+        
+        &__img{
+            margin-bottom: 2vh
+        }
+
+        &__h1{
+            @include h1;
+            font-size: 38px;
+            margin-bottom: 2vh;
+        }
+        &__refContainer{
+            display: grid;
+            gap: 4vh;
+            @include h2;
+            text-decoration: none;
+            color: white;
+            
+        }
+        
+        &__text{
+            @include text;
+            margin-bottom: 3vh;
+        }
+
+        
+    }
 }

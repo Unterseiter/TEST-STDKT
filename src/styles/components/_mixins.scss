@@ -9,6 +9,16 @@
     vertical-align: middle;
 }
 
+@mixin h2 {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+}
+
 @mixin text{
     font-family: Inter;
     font-weight: 400;
