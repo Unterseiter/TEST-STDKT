@@ -1,3 +1,58 @@
-.sectionContacts{
-    height: 798px;
+@use '../components/mixins' as *;
+
+.sectionContacts {
+    height: 600px;
+    margin: 5%;
+    width: 90%;
+
+    &__h1 {
+        @include h1;
+        transform: translateX(200px);
+        width: 40%;
+    }
+
+    &__text{
+        @include text;
+    }
+
+    &__button{
+        @include buttonGreen;
+    }
+
+    &__container {
+        columns: 2;
+        gap: 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__firstColumn {
+            width: 400px;
+            height: 500px;
+            border-width: 1px;
+            border-radius: 35px;
+            border-style: solid;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+
+        &__secondColumn {
+            width: 800px;
+            height: 500px;
+            border-width: 1px;
+            border-radius: 35px;
+            border-style: solid; // Добавлено
+            background: #70CAF3;
+            display: grid;
+
+            &__block{
+                display: flex;
+                gap: 1vh;
+                
+            }
+        }
+    }
 }

@@ -51,12 +51,17 @@
     <!-- Пуопулярное -->
     <section class="sectionPopular">
         <a id="#catalog"></a>
-        <div class="sectionPopular__div">
-            <h1 class="sectionPopular__div__h1">
-                ПОПУЛЯРНЫЕ ЛИНЕЙКИ 
-            </h1>
-            <button class="sectionPopular__div__specialButton"> > </button>
-        </div>
+
+        <section class="sectionPopular__carousel">
+            <div class="sectionPopular__carousel__track">
+                <div class="sectionPopular__carousel__item">Слайд 1</div>
+                <div class="sectionPopular__carousel__item">Слайд 2</div>
+                <div class="sectionPopular__carousel__item">Слайд 3</div>
+            </div>
+            
+            <button class="sectionPopular__carousel__button sectionPopular__carousel__button--prev">&lt;</button>
+            <button class="sectionPopular__carousel__button sectionPopular__carousel__button--next">&gt;</button>
+        </section>
         
     </section>
 
@@ -169,12 +174,41 @@
 
     <section class="sectionContacts">
         <a id="#contacts"></a>
-        контакты
+        <h1 class="sectionContacts__h1">
+            КОНТАКТЫ
+        </h1>
+        <div class="sectionContacts__container">
+            <div class="sectionContacts__container__firstColumn">Свяжитесь с нами</div>
+            <div class="sectionContacts__container__secondColumn">
+                <h1 class="sectionContacts__h1">
+                    Напишите нам
+                </h1>
+                <div class="sectionContacts__container__secondColumn__block">
+                    <p>
+                        Ваше имя <br>
+                        <input type="text" name="FIO" id="getFIO">
+                    </p>
+                    <p>
+                        Ваш телефон <br>
+                        <input type="text" name="number" id="getNumber">
+                    </p>
+                </div>
+                <div>
+                    Ваш вопрос <br>
+                    <input type="text" name="question" id="getQuestion">
+                </div>
+                <button class="sectionContacts__button">
+                    Отправить
+                </button>
+            </div>
+        </div>
     </section>
+
 
     <section class="sectionMap">
         карта яндекс
     </section>
+
 
     <footer class="footer">
         <div class="footer__column">
