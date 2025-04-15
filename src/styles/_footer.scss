@@ -26,16 +26,22 @@
         &__refContainer{
             display: grid;
             gap: 4vh;
-            @include h2;
-            text-decoration: none;
+            @include text;
+            font-size: 20px;
             color: white;
             
+            &__ref{
+                color: white; 
+                text-decoration: none;
+                cursor: pointer;
+            }
         }
         
         &__text{
             @include text;
             margin-bottom: 3vh;
         }
+
 
         
     }
