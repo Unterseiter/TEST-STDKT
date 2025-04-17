@@ -55,54 +55,92 @@
 
     <!-- Пуопулярное -->
     <section class="sectionPopular">
-        <div class="swiper sectionPopular__swiper">
-            <div class="swiper-wrapper">
-
-                <div class="swiper-slide sectionPopular__item">
-                    <img src="./assets/images/blueTvorog.png" 
-                         alt="Творог" 
-                         class="sectionPopular__itemImage">
+        <h2 class="sectionPopular__title">ПОПУЛЯРНЫЕ ЛИНЕЙКИ</h2>
+        
+        <div class="sectionPopular__gradient-wrapper">
+            <div class="swiper sectionPopular__swiper">
+                <div class="swiper-wrapper">
+    
+                    <div class="swiper-slide sectionPopular__item">
+                        <div class="sectionPopular__image-container">
+                            <img src="./assets/images/blueTvorog.png" 
+                                 alt="Творог" 
+                                 class="sectionPopular__itemImage">
                         </div>
-                        <div class="sectionPopular__itemContent">
+                        <div class="sectionPopular__content-wrapper">
                             <h3 class="sectionPopular__itemTitle">Творог Министский</h3>
+                            <p class="sectionPopular__itemDescription">Улучшает жировой обмен,
+                                профилактика заболеваний 
+                                сердца и сосудов</p>
+                            <button class="sectionPopular__detailsButton">Подробнее</button>
                         </div>
-                
-                <div class="swiper-slide sectionPopular__item">
-                    <img src="./assets/images/airan.png" 
-                         alt="Айран" 
-                         class="sectionPopular__itemImage">
-                         <div class="sectionPopular__itemContent">
-                             <h3 class="sectionPopular__itemTitle">тимулирует пищеварение, улучшает микрофлору кишечника</h3>
-                         </div>
+                    </div>
+
+                    <div class="swiper-slide sectionPopular__item">
+                        <div class="sectionPopular__image-container">
+                            <img src="./assets/images/airan.png" 
+                                 alt="Айран" 
+                                 class="sectionPopular__itemImage">
                         </div>
-
-                <div class="swiper-slide sectionPopular__item">
-                    <img src="./assets/images/MolokoRed.png" 
-                         alt="Молоко" 
-                         class="sectionPopular__itemImage">
-                    <div class="sectionPopular__itemContent">
-                        <h3 class="sectionPopular__itemTitle">Улучшает работу иммунной системы</h3>
+                        <div class="sectionPopular__content-wrapper">
+                            <h3 class="sectionPopular__itemTitle">Айран</h3>
+                            <p class="sectionPopular__itemDescription">Стимулирует пищеварение, 
+                                улучшает микрофлору кишечника,
+                                Повышает иммунитет</p>
+                            <button class="sectionPopular__detailsButton">Подробнее</button>
+                        </div>
                     </div>
-                </div>
-
-                <div class="swiper-slide sectionPopular__item">
-                    <img src="./assets/images/image 17.svg" 
-                         alt="Йогурт" 
-                         class="sectionPopular__itemImage">
-                    <div class="sectionPopular__itemContent">
-                        <h3 class="sectionPopular__itemTitle"> Улучшает работоспособность системы понижает ваше давление</h3>
+    
+                    <div class="swiper-slide sectionPopular__item">
+                        <div class="sectionPopular__image-container">
+                            <img src="./assets/images/MolokoRed.png" alt="Молоко" class="sectionPopular__itemImage">
+                        </div>
+                        <div class="sectionPopular__content-wrapper">
+                            <h3 class="sectionPopular__itemTitle">
+                                Молоко
+                            </h3>
+                            <p class="sectionPopular__itemDescription">
+                                Улучшает работу иммунной 
+системы, понижает кровяное
+давление и еще монжество других вещей 
+                            </p>
+                            <button class="sectionPopular__detailsButton">
+                                Подробнее
+                            </button>
+                        </div>
                     </div>
-                </div>
+    
+                    <div class="swiper-slide sectionPopular__item">
+                        <div class="sectionPopular__image-container">
+                            <img src="./assets/images/smetana.png" alt="Сметана" class="sectionPopular__itemImage">
+                        </div>
+                        <div class="sectionPopular__content-wrapper">
+                            <h3 class="sectionPopular__itemTitle">
+                                Сметана
+                            </h3>
+                            <p class="sectionPopular__itemDescription">
+                                Улучшает работу иммунной 
+системы, понижает кровяное
+давление и еще множество другого
+                            </p>
+                            <button class="sectionPopular__detailsButton">
+                                Подробнее
+                            </button>
+                        </div>
+                    </div>
 
+                </div>
             </div>
-            <div class="sectionPopular__navigation">
-                <button class="sectionPopular__button sectionPopular__button--prev">
-                    ←
-                </button>
-                <button class="sectionPopular__button sectionPopular__button--next">
-                    →
-                </button>
-            </div>
+        </div>
+    
+        <!-- Кнопки навигации -->
+        <div class="sectionPopular__navigation">
+            <button class="sectionPopular__button sectionPopular__button--prev">
+                ←
+            </button>
+            <button class="sectionPopular__button sectionPopular__button--next">
+                →
+            </button>
         </div>
     </section>
 
@@ -151,12 +189,19 @@
     </section>
 
 
-    <section class="sectionHit">
-        хиты продаж
+    <section class="sectionHit" style="background-color: rgb(0 0 0 / 40%);">
+        <h1 class="sectionContacts__h1">
+
+            хиты продаж
+        </h1>
+        <img src="./assets/images/tape.png" alt="tape" style="width: 100%;">
     </section>
 
-    <section class="sectionRecipe">
-        рецепты от нас
+    <section class="sectionRecipe" style="background-color: rgb(0 0 0 / 40%);">
+        <h1 class="sectionContacts__h1">
+            рецепты от нас
+        </h1>
+        <img src="./assets/images/tape.png" alt="tape" style="width: 100%;">
     </section>
 
     <section class="sectionGeografy">

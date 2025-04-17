@@ -1,63 +1,105 @@
 $primary-color: #3262AC;
+$tablet-breakpoint: 768px;
+$mobile-breakpoint: 480px;
 
-.header{
-    background-color: $primary-color;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 100px;
-    box-sizing: border-box;
-    gap: 5vw;
+.header {
+  background-color: $primary-color;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100px;
+  box-sizing: border-box;
+  gap: 5vw;
+  margin: 0;
+  padding: 0;
+
+  // Планшеты (вертикальная ориентация)
+  @media (max-width: $tablet-breakpoint) {
+    gap: 3vw;
+    padding: 0 15px;
     
-    margin: 0;
-    padding: 0;
+    &__logo {
+      height: 80px;
+      width: 80px;
+    }
+  }
+
+  // Мобильные устройства
+  @media (max-width: $mobile-breakpoint) {
+    flex-direction: column;
+    padding: 20px 15px;
+    gap: 15px;
     
-    &__logo{
-        height: 100px;
-        width: 100px;
-        cursor: pointer;
+    &__logo {
+      height: 60px;
+      width: 60px;
     }
 
     &__nav {
-        display: flex;
-        gap: 1vw;
-        align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
 
-        &__special{
-            background-color: black;
-            background: rgb(0 0 0 / 30%);
-            border: 0;
-            border-radius: 25px;
-            color: #ffffff;
-            padding: 10px 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-
-            &__message{
-                width: 25px;
-                background-color: #ffffff;
-                border: 0;
-                border-radius: 15px;
-                color: black;
-            }
+      &__special {
+        padding: 8px 15px;
+        
+        // Скрываем текст в специальной кнопке на мобильных
+        span:not(.header__nav__special__message) {
+          display: none;
         }
+      }
 
-        &__button {
-            background-color: transparent;
-            border: 0;
-            color: #ffffff;
-            padding: 10px 20px;
-            cursor: pointer;
-            
-        }
+      &__button {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
     }
-    
+  }
+
+  &__logo {
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+
+    &__special {
+      background-color: black;
+      background: rgb(0 0 0 / 30%);
+      border: 0;
+      border-radius: 25px;
+      color: #ffffff;
+      padding: 10px 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      &__message {
+        width: 25px;
+        background-color: #ffffff;
+        border: 0;
+        border-radius: 15px;
+        color: black;
+      }
+    }
+
+    &__button {
+      background-color: transparent;
+      border: 0;
+      color: #ffffff;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  }
 }
 
-.underline{
-    text-decoration: underline dotted 14%;
+.underline {
+  text-decoration: underline dotted 14%;
 }

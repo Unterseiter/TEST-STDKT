@@ -8,18 +8,22 @@ const initPopularSwiper = () => {
         loop: false,
         slidesPerView: 'auto',
         spaceBetween: 20,
-        centeredSlides: false,
+        centeredSlides: true,
         navigation: {
             nextEl: '.sectionPopular__button--next',
             prevEl: '.sectionPopular__button--prev',
             disabledClass: 'sectionPopular__button--disabled'
         },
         breakpoints: {
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 30
+            640: {
+                slidesPerView: 1.2,
+                spaceBetween: 20
             },
             1024: {
+                slidesPerView: 2.5,
+                spaceBetween: 30
+            },
+            1280: {
                 slidesPerView: 3,
                 spaceBetween: 40
             }
@@ -114,8 +118,4 @@ function initMap() {
     
     // Открываем балун автоматически
     marker.balloon.open();
-}
-
-function search() {
-
 }
