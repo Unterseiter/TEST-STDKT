@@ -3,24 +3,24 @@ import Swiper from 'swiper';
 import 'swiper/css';
 
 const initPopularSwiper = () => {
-    new Swiper('.sectionPopular__swiper', {
+    new Swiper('.sectionPopular__carousel', {
         loop: false,
         slidesPerView: 'auto',
         spaceBetween: 20,
         centeredSlides: false,
         navigation: {
-            nextEl: '.sectionPopular__button--next',
-            prevEl: '.sectionPopular__button--prev',
-            disabledClass: 'sectionPopular__button--disabled'
+            nextEl: '.sectionPopular__carousel__nav--next',
+            prevEl: '.sectionPopular__carousel__nav--prev',
+            disabledClass: 'sectionPopular__carousel__nav--disabled'
         },
         breakpoints: {
             768: {
-                slidesPerView: 2,
-                spaceBetween: 30
+                spaceBetween: 30,
+                slidesPerView: 2
             },
             1024: {
-                slidesPerView: 3,
-                spaceBetween: 40
+                spaceBetween: 40,
+                slidesPerView: 3
             }
         }
     });

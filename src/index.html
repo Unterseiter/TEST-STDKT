@@ -48,58 +48,66 @@
     </section>
 
     <!-- Пуопулярное -->
+    
     <section class="sectionPopular">
-        <div class="swiper sectionPopular__swiper">
+        <h1 class="sectionPopular__h1">ПОПУЛЯРНЫЕ ЛИНЕЙКИ</h1>
+        <div class="sectionPopular__carousel swiper">
             <div class="swiper-wrapper">
-
-                <div class="swiper-slide sectionPopular__item">
-                    <img src="./assets/images/blueTvorog.png" 
-                         alt="Творог" 
-                         class="sectionPopular__itemImage">
-                        </div>
-                        <div class="sectionPopular__itemContent">
-                            <h3 class="sectionPopular__itemTitle">Творог Министский</h3>
-                        </div>
-                
-                <div class="swiper-slide sectionPopular__item">
-                    <img src="./assets/images/airan.png" 
-                         alt="Айран" 
-                         class="sectionPopular__itemImage">
-                         <div class="sectionPopular__itemContent">
-                             <h3 class="sectionPopular__itemTitle">тимулирует пищеварение, улучшает микрофлору кишечника</h3>
-                         </div>
-                        </div>
-
-                <div class="swiper-slide sectionPopular__item">
-                    <img src="./assets/images/MolokoRed.png" 
-                         alt="Молоко" 
-                         class="sectionPopular__itemImage">
-                    <div class="sectionPopular__itemContent">
-                        <h3 class="sectionPopular__itemTitle">Улучшает работу иммунной системы</h3>
+                <!-- Слайд 1 -->
+                <div class="sectionPopular__carousel__item swiper-slide">
+                    <img src="./assets/images/blueTvorog.png" alt="Творог" class="sectionPopular__carousel__item__img">
+                    <div class="sectionPopular__carousel__item__text">
+                        <p class="sectionPopular__carousel__item__text__header">Творог</p>
+                        <p class="sectionPopular__carousel__item__text__about">
+                            Улучшает жировой обмен, профилактика заболеваний сердца и сосудов
+                        </p>
+                        <button class="sectionPopular__carousel__item__text__button">Смотреть каталог</button>
                     </div>
                 </div>
-
-                <div class="swiper-slide sectionPopular__item">
-                    <img src="./assets/images/image 17.svg" 
-                         alt="Йогурт" 
-                         class="sectionPopular__itemImage">
-                    <div class="sectionPopular__itemContent">
-                        <h3 class="sectionPopular__itemTitle"> Улучшает работоспособность системы понижает ваше давление</h3>
+    
+                <!-- Слайд 2 -->
+                <div class="sectionPopular__carousel__item swiper-slide">
+                    <img src="./assets/images/airan.png" alt="Айран" class="sectionPopular__carousel__item__img">
+                    <div class="sectionPopular__carousel__item__text">
+                        <p class="sectionPopular__carousel__item__text__header">Айран</p>
+                        <p class="sectionPopular__carousel__item__text__about">
+                            Стимулирует пищеварение, улучшает микрофлору кишечника, Повышает иммунитет
+                        </p>
+                        <button class="sectionPopular__carousel__item__text__button">Смотреть каталог</button>
                     </div>
                 </div>
-
+    
+                <!-- Слайд 3 -->
+                <div class="sectionPopular__carousel__item swiper-slide">
+                    <img src="./assets/images/MolokoRed.png" alt="Молоко" class="sectionPopular__carousel__item__img">
+                    <div class="sectionPopular__carousel__item__text">
+                        <p class="sectionPopular__carousel__item__text__header">Молоко</p>
+                        <p class="sectionPopular__carousel__item__text__about">
+                            Улучшает работу иммунной системы, понижает кровяное давление и еще...
+                        </p>
+                        <button class="sectionPopular__carousel__item__text__button">Смотреть каталог</button>
+                    </div>
+                </div>
+    
+                <!-- Слайд 4 -->
+                <div class="sectionPopular__carousel__item swiper-slide">
+                    <img src="./assets/images/image17.svg" alt="Йогурт" class="sectionPopular__carousel__item__img">
+                    <div class="sectionPopular__carousel__item__text">
+                        <p class="sectionPopular__carousel__item__text__header">Йогурт</p>
+                        <p class="sectionPopular__carousel__item__text__about">
+                            Улучшает работу иммунной системы, понижает кровяное давление и тд
+                        </p>
+                        <button class="sectionPopular__carousel__item__text__button">Смотреть каталог</button>
+                    </div>
+                </div>
             </div>
-            <div class="sectionPopular__navigation">
-                <button class="sectionPopular__button sectionPopular__button--prev">
-                    ←
-                </button>
-                <button class="sectionPopular__button sectionPopular__button--next">
-                    →
-                </button>
-            </div>
+    
+            <!-- Кнопки навигации -->
+            <button class="sectionPopular__carousel__nav sectionPopular__carousel__nav--prev">←</button>
+            <button class="sectionPopular__carousel__nav sectionPopular__carousel__nav--next">→</button>
         </div>
     </section>
-
+    
     <section class="sectionTraditional">
         <a id="#about"></a>
         <div class="sectionTraditional__container">
