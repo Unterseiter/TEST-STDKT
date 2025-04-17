@@ -32,6 +32,10 @@
 
 $baseColor: #76B72A;
 
+@mixin fade-transition {
+    transition: all 0.3s ease-in-out;
+}
+
 @mixin buttonGreen{
     width: 155px;
     height: 52px;

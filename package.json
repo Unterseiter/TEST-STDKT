@@ -13,7 +13,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
     "autoprefixer": "^10.4.21",
+    "babel-loader": "^10.0.0",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.2",
     "file-loader": "^6.2.0",
@@ -33,6 +36,7 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.36",
+    "inputmask": "^5.0.9",
     "lodash": "^4.17.21",
     "swiper": "^11.2.6"
   }

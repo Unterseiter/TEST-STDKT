@@ -46,6 +46,21 @@
             display: grid;
             color: black;
             gap: 5px;
+            overflow: hidden;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 50%;
+                height: 20%;
+                background: linear-gradient(to top, #3262AC 0%, transparent 100%);
+                z-index: 5;
+                pointer-events: none;
+              }
+            
 
             &__row{
                 display: flex;

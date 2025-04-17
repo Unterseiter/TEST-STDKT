@@ -12,10 +12,13 @@
 <body>
 
     <header class="header">
-        <a id="#top"></a>
         <img src="./assets/images/logo.svg" alt="Logo" class="header__logo">
         <nav class="header__nav">
-            <button class="header__nav__button">Каталог</button>
+            <button class="header__nav__special">
+                <img src="./assets/images/Hamburger Menu.svg" alt="Hamburger Menu">
+                Каталог
+                <div class="header__nav__special__message">98</div>
+            </button>
             <button class="header__nav__button">Главная</button>
             <button class="header__nav__button">О заводе</button>
             <button class="header__nav__button">Где купить</button>
@@ -25,7 +28,7 @@
             <p>
                 +7 (8772) 56 95 20
             </p>
-            <p>
+            <p class="underline">
                 обратная связь
             </p>
         </div>
@@ -42,9 +45,12 @@
             </p>
                 <button class="sectionHead__button">Подробнее</button>
         </div>
-        <div class="sectionHead__secondColumn">
-            для галерии из продуктов
-        </div>
+        <!-- <div class="sectionHead__secondColumn">
+            <div class="sectionHead__secondColumn__container"> 1 </div>
+            <div class="sectionHead__secondColumn__container"> 2 </div>
+            <div class="sectionHead__secondColumn__container"> 3 </div>
+            <div class="sectionHead__secondColumn__container"> 4 </div>
+        </div> -->
     </section>
 
     <!-- Пуопулярное -->
@@ -101,7 +107,7 @@
     </section>
 
     <section class="sectionTraditional">
-        <a id="#about"></a>
+        <a id="about"></a>
         <div class="sectionTraditional__container">
             <h1 class="sectionTraditional__container__h1">ТРАДИЦИОННАЯ РЕЦЕПТУРА <br> И ВКЛАД В ЗДОРОВОЕ <br> БУДУЩЕЕ ПОКОЛЕНИЙ</h1>
             <p class="sectionTraditional__container__text">Мы готовы предложить вам традиционные продукты
@@ -154,7 +160,7 @@
     </section>
 
     <section class="sectionGeografy">
-        <a id="#toBuy"></a>
+        <a id="toBuy"></a>
         <div class="sectionGeografy__container">
             <h1 class="sectionGeografy__container__h1">ГЕОРГРАФИЯ ПРОДАЖ</h1>
             <p class="sectionGeografy__container__text">Вы сможете наши продукты в таких регионах: Астраханская 
@@ -167,32 +173,32 @@
             <div class="sectionGeografy__container__blockContainer">
                 <div class="sectionGeografy__container__blockContainer__row">
                     <div class="sectionGeografy__container__blockContainer__row__block">
-                        1
+                        <img src="./assets/images/image 22.svg" alt="Магнит">
                     </div>
                     <div class="sectionGeografy__container__blockContainer__row__blockDouble">
-                        2
+                        <img src="./assets/images/image 24.svg" alt="Перекресток">
                     </div>
                     <div class="sectionGeografy__container__blockContainer__row__block">
-                        3
+                        <img src="./assets/images/image 23.svg" alt="Пятерочка">
                     </div>
                 </div>
                 <div class="sectionGeografy__container__blockContainer__row">
                     <div class="sectionGeografy__container__blockContainer__row__block">
-                        4
+                        <img src="./assets/images/image 27.svg" alt="Ашан">
                     </div>
                     <div class="sectionGeografy__container__blockContainer__row__block">
-                        5
+                        <img src="./assets/images/image 26.svg" alt="hz">
                     </div>
                     <div class="sectionGeografy__container__blockContainer__row__blockDouble">
-                        6
+                        <img src="./assets/images/image 25.svg" alt="лента">
                     </div>
                 </div>
                 <div class="sectionGeografy__container__blockContainer__row">
                     <div class="sectionGeografy__container__blockContainer__row__blockDouble">
-                        7
+                        <img src="./assets/images/image 25.svg" alt="Окей">
                     </div>
                     <div class="sectionGeografy__container__blockContainer__row__blockDouble">
-                        8
+                        <img src="./assets/images/image 24.svg" alt="Победа">
                     </div>
                 </div>
             </div>
@@ -207,40 +213,83 @@
     </section>
 
     <section class="sectionContacts">
-        <a id="#contacts"></a>
-        <h1 class="sectionContacts__h1">
-            КОНТАКТЫ
-        </h1>
+        <a id="contacts"></a>
+        <h1 class="sectionContacts__h1">КОНТАКТЫ</h1>
+        
         <div class="sectionContacts__container">
-            <div class="sectionContacts__container__firstColumn">Свяжитесь с нами</div>
+
+            <div class="sectionContacts__container__firstColumn">
+                <h2 class="sectionContacts__h2">Свяжитесь с нами</h2>
+                
+                <div class="contacts-list">
+                    <div class="contact-item">
+                        <span class="contact-label">Адрес</span>
+                        <p class="contact-text">г. Майкоп, ул. Транспортная, 5</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-label">Приемная</span>
+                        <a href="tel:+78772536873" class="contact-text">+7 (8772) 53 68 73</a>
+                        <a href="mailto:info@molkom-adyg.ru" class="contact-text">info@molkom-adyg.ru</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-label">Отдел продаж</span>
+                        <a href="tel:+78772569520" class="contact-text">+7 (8772) 56 95 20</a>
+                        <a href="tel:+78772530646" class="contact-text">+7 (8772) 53 06 46</a>
+                        <a href="mailto:otdelprod@molkom-adyg.ru" class="contact-text">otdelprod@molkom-adyg.ru</a>
+                    </div>
+                </div>
+                
+                <button class="sectionContacts__button">Все контакты</button>
+            </div>
+
             <div class="sectionContacts__container__secondColumn">
-                <h1 class="sectionContacts__h1">
-                    Напишите нам
-                </h1>
-                <div class="sectionContacts__container__secondColumn__block">
-                    <p>
-                        Ваше имя <br>
-                        <input type="text" name="FIO" id="getFIO">
-                    </p>
-                    <p>
-                        Ваш телефон <br>
-                        <input type="text" name="number" id="getNumber">
-                    </p>
-                </div>
-                <div>
-                    Ваш вопрос <br>
-                    <input type="text" name="question" id="getQuestion">
-                </div>
-                <button class="sectionContacts__button">
-                    Отправить
-                </button>
+                <h2 class="sectionContacts__h2">Напишите нам</h2>
+                
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Ваше имя</label>
+                            <input 
+                                type="text" 
+                                placeholder="Напишите имя..."
+                                class="form-input"
+                                required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label>Ваш телефон</label>
+                            <input 
+                                type="tel" 
+                                placeholder="+7 (___) ___-__-__"
+                                class="form-input phone-mask"
+                                required>
+                        </div>
+                    </div>
+    
+                    <div class="input-group">
+                        <label>Ваш вопрос или комментарий</label>
+                        <textarea 
+                            class="form-input textarea"
+                            placeholder="Напишите вопрос или комментарий..."
+                            rows="4"
+                            required></textarea>
+                    </div>
+    
+                    <div class="form-submit-wrapper">
+                        <button type="submit" class="sectionContacts__button">Отправить</button>
+                        <div class="success-message">Сообщение успешно отправлено!</div>
+                    </div>
+                </form>
+                
+                <p class="form-notice">Отправляя форму, вы даете согласие на обработку ваших персональных данных.</p>
             </div>
         </div>
     </section>
 
 
-    <section class="sectionMap">
-        карта яндекс
+    <section id="yandex-map" class="sectionMap">
     </section>
 
 
@@ -302,7 +351,20 @@
                 </div>
             </div>
         </div>
+        <div class="footer__foot">
+            <div class="footer__foot__compression">
+                <img src="./assets/images/232 1.svg" alt="ГОСТ">
+                <p>
+                    без добавления <br>
+                    сухого молока
+                </p>
+            </div>
+            <div class="footer__foot__noncompression">
+                ЗАО «Молкомбинат "Адыгейский"» © 2023
+            </div>
+        </div>
     </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=2f864594-f0ad-4759-9b21-0bf8d2f378d3&lang=ru_RU"></script>
 </body>
 
 </html>

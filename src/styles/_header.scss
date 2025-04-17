@@ -25,13 +25,39 @@ $primary-color: #3262AC;
         gap: 1vw;
         align-items: center;
 
+        &__special{
+            background-color: black;
+            background: rgb(0 0 0 / 30%);
+            border: 0;
+            border-radius: 25px;
+            color: #ffffff;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            &__message{
+                width: 25px;
+                background-color: #ffffff;
+                border: 0;
+                border-radius: 15px;
+                color: black;
+            }
+        }
+
         &__button {
             background-color: transparent;
             border: 0;
             color: #ffffff;
             padding: 10px 20px;
             cursor: pointer;
+            
         }
     }
     
+}
+
+.underline{
+    text-decoration: underline dotted 14%;
 }

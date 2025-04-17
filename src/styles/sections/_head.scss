@@ -27,9 +27,21 @@
     }
 
     &__secondColumn{
-        height: 302px;
-        width: 433px;
+        width: 400px;
+        height: 500px;
         transform: translateY(-50px);
+        gap: 15px;
+        columns: 2;
+        overflow: hidden;
+        background: transparent;
+
+        &__container{
+            width: 150px;
+            height: 250px;
+            background-color:darkcyan;
+            display: flex;
+            flex-direction: column
+        }
     }
 
     &__button{

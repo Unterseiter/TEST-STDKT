@@ -1,58 +1,174 @@
 @use '../components/mixins' as *;
 
 .sectionContacts {
-    height: 600px;
-    margin: 5%;
-    width: 90%;
-
-    &__h1 {
-        @include h1;
-        transform: translateX(200px);
-        width: 40%;
-    }
-
-    &__text{
-        @include text;
-    }
+    padding: 60px 0;
+    position: relative;
 
     &__button{
         @include buttonGreen;
     }
 
+    &__h1 {
+        @include h1;
+        margin-bottom: 40px;
+        padding-left: 15vw;
+    }
+
     &__container {
-        columns: 2;
-        gap: 3vw;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+
+        &__firstColumn, &__secondColumn {
+            padding: 40px;
+            border: 1px solid #ddd;
+            border-radius: 35px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
 
         &__firstColumn {
-            width: 400px;
-            height: 500px;
-            border-width: 1px;
-            border-radius: 35px;
-            border-style: solid;
-            background: white;
+            flex: 1;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            background: white;
+            flex-direction: column;
+            gap: 30px;
+
+            .contacts-list {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                .contact-item {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .contact-label {
+                        @include text;
+                        color: #333;
+                    }
+
+                    .contact-text {
+                        @include text;
+                        color: #666;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: #70CAF3;
+                        }
+                    }
+                }
+            }
         }
 
         &__secondColumn {
-            width: 800px;
-            height: 500px;
-            border-width: 1px;
-            border-radius: 35px;
-            border-style: solid; // Добавлено
-            background: #70CAF3;
-            display: grid;
+            flex: 2;
+            background: rgb(112 176 243 / 30% );
 
-            &__block{
+            .contact-form {
                 display: flex;
-                gap: 1vh;
+                flex-direction: column;
+                gap: 25px;
+
+                .form-row {
+                    display: flex;
+                    gap: 20px;
+
+                    .input-group {
+                        flex: 1;
+                    }
+                }
+
+                .input-group {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    label {
+                        @include text;
+                        color: #333;
+                    }
+
+                    .form-input {
+                        @include text;
+                        padding: 12px 15px;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                        transition: border-color 0.3s;
+
+                        &:focus {
+                            border-color: #70CAF3;
+                            outline: none;
+                        }
+
+                        &.textarea {
+                            resize: vertical;
+                            min-height: 100px;
+                        }
+                    }
+                }
+
+                .form-notice {
+                    @include text;
+                    font-size: 0.9em;
+                    color: #666;
+                    text-align: center;
+                    margin-top: 15px;
+                    opacity: 80%;
+                }
                 
+                .form-submit-wrapper {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    margin-top: 20px;
+                }
+            
+                .success-message {
+                    @include text;
+                    color: #28a745;
+                    padding: 10px 15px;
+                    background: #d4edda;
+                    border-radius: 5px;
+                    border: 1px solid #c3e6cb;
+                    display: none; // Скрыто по умолчанию
+                    animation: fadeIn 0.3s ease;
+                    @include fade-transition;
+                    opacity: 0;
+                    visibility: hidden;
+            
+                    &.visible {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    &::before {
+                        content: "✓";
+                        margin-right: 8px;
+                    }
+                }
+            
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateX(10px); }
+                    to { opacity: 1; transform: translateX(0); }
+                }
             }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .sectionContacts__container {
+        flex-direction: column;
+        
+        &__firstColumn, &__secondColumn {
+            width: 100% !important;
+        }
+        
+        .form-row {
+            flex-direction: column;
         }
     }
 }
