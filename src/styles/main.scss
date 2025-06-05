@@ -1,15 +1,4 @@
-@use 'sections/head' as *;
-@use 'sections/contacts' as *;
-@use 'sections/geografy' as *;
-@use 'sections/hit' as *;
-@use 'sections/map' as *;
-@use 'sections/popular' as *;
-@use 'sections/recipe' as *;
-@use 'sections/traditional' as *;
-@use 'header' as *;
-@use 'footer' as *;
-
-
+@use 'sections/header' as *;
 
 * {
     margin: 0;

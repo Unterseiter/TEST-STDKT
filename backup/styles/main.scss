@@ -1,0 +1,18 @@
+@use 'sections/head' as *;
+@use 'sections/contacts' as *;
+@use 'sections/geografy' as *;
+@use 'sections/hit' as *;
+@use 'sections/map' as *;
+@use 'sections/popular' as *;
+@use 'sections/recipe' as *;
+@use 'sections/traditional' as *;
+@use 'header' as *;
+@use 'footer' as *;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
