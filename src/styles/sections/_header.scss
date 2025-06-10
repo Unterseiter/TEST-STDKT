@@ -1,0 +1,20 @@
+@use "../mixins/logo" as *;
+
+.header{
+    width: 100%;
+    background-color: #3262AC;
+    display: flex;
+    gap: 148px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &__logo{
+        max-width: 50px;
+        max-height: 50px;
+        width: auto;
+        height: auto
+        // margin-left: 5%;
+        // margin-right: 5%;
+    }
+}
