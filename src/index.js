@@ -1,37 +1,37 @@
-import Inputmask from 'inputmask';
 import '../src/styles/main.scss';
-import Swiper from 'swiper';
-import 'swiper/css';
+import Inputmask from 'inputmask';
+// import Swiper from 'swiper';
+// import 'swiper/css';
 
-const initPopularSwiper = () => {
-    new Swiper('.sectionPopular__swiper', {
-        loop: false,
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-        centeredSlides: true,
-        navigation: {
-            nextEl: '.sectionPopular__button--next',
-            prevEl: '.sectionPopular__button--prev',
-            disabledClass: 'sectionPopular__button--disabled'
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 1.2,
-                spaceBetween: 20
-            },
-            1024: {
-                slidesPerView: 2.5,
-                spaceBetween: 30
-            },
-            1280: {
-                slidesPerView: 3,
-                spaceBetween: 40
-            }
-        }
-    });
-};
+// const initPopularSwiper = () => {
+//     new Swiper('.sectionPopular__swiper', {
+//         loop: false,
+//         slidesPerView: 'auto',
+//         spaceBetween: 20,
+//         centeredSlides: true,
+//         navigation: {
+//             nextEl: '.sectionPopular__button--next',
+//             prevEl: '.sectionPopular__button--prev',
+//             disabledClass: 'sectionPopular__button--disabled'
+//         },
+//         breakpoints: {
+//             640: {
+//                 slidesPerView: 1.2,
+//                 spaceBetween: 20
+//             },
+//             1024: {
+//                 slidesPerView: 2.5,
+//                 spaceBetween: 30
+//             },
+//             1280: {
+//                 slidesPerView: 3,
+//                 spaceBetween: 40
+//             }
+//         }
+//     });
+// };
 
-document.addEventListener('DOMContentLoaded', initPopularSwiper);
+// document.addEventListener('DOMContentLoaded', initPopularSwiper);
 
 
 const phoneInputs = document.querySelectorAll('.phone-mask');
@@ -119,3 +119,65 @@ function initMap() {
     // Открываем балун автоматически
     marker.balloon.open();
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.header');
+    const burger = document.querySelector('.header__burger');
+    const nav = document.querySelector('.header__nav');
+    const overlay = document.querySelector('.header__overlay');
+    const siteWrapper = document.querySelector('.site-wrapper');
+    
+    let lastScrollPosition = window.pageYOffset;
+    const scrollThreshold = 100;
+  
+    function updateHeaderStyles() {
+      const currentScrollPosition = window.pageYOffset;
+      
+      if (currentScrollPosition < 10) {
+        header.classList.remove('header--scrolled');
+      } else {
+        header.classList.add('header--scrolled');
+      }
+      
+      if (currentScrollPosition > lastScrollPosition && currentScrollPosition > scrollThreshold) {
+        header.classList.add('header--hidden');
+      } else if (currentScrollPosition < lastScrollPosition) {
+        header.classList.remove('header--hidden');
+      }
+      
+      lastScrollPosition = currentScrollPosition;
+    }
+  
+    function toggleMenu() {
+      burger.classList.toggle('header__burger--active');
+      nav.classList.toggle('header__nav--active');
+      overlay.classList.toggle('header__overlay--active');
+      siteWrapper.classList.toggle('site-wrapper--dimmed');
+      
+      // Блокировка скролла
+      document.body.style.overflow = nav.classList.contains('header__nav--active') ? 'hidden' : '';
+    }
+  
+    function closeMenu() {
+      burger.classList.remove('header__burger--active');
+      nav.classList.remove('header__nav--active');
+      overlay.classList.remove('header__overlay--active');
+      siteWrapper.classList.remove('site-wrapper--dimmed');
+      document.body.style.overflow = '';
+    }
+  
+    // Инициализация
+    updateHeaderStyles();
+    
+    // Назначение обработчиков
+    burger.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', closeMenu);
+    window.addEventListener('scroll', updateHeaderStyles);
+  
+    // Закрытие при ресайзе
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > parseInt(getComputedStyle(document.documentElement).getPropertyValue('--mobile-breakpoint'))) {
+        closeMenu();
+      }
+    });
+  });

@@ -3,113 +3,117 @@
 $tablet-breakpoint: 768px;
 $mobile-breakpoint: 480px;
 
-.sectionHead {
-    color: white;
-    background: #3262AC;
-    min-height: 700px;
+.section-head {
+  color: white;
+  background: #3262AC;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  padding: 20px;
+  box-sizing: border-box;
+
+  &__content {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 5vw;
-    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
 
     @media (max-width: $tablet-breakpoint) {
-        min-height: 600px;
-        flex-direction: column;
-        gap: 30px;
-        padding: 40px 20px;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
 
-        &__firstColumn {
-            transform: none;
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            text-align: center;
+  &__first-column {
+    width: 433px;
+    transform: translateY(-50px);
 
-            &__h1 {
-                font-size: 2.5rem;
-                margin-bottom: 15px;
-            }
+    @media (max-width: $tablet-breakpoint) {
+      transform: none;
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+    }
+  }
 
-            &__text {
-                font-size: 1rem;
-                margin-bottom: 20px;
-            }
-        }
+  &__title {
+    @include h1;
+    margin-bottom: 2vh;
 
-        &__secondColumn {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            transform: none;
-            columns: 1;
-        }
+    @media (max-width: $tablet-breakpoint) {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
     }
 
     @media (max-width: $mobile-breakpoint) {
-        min-height: 500px;
-        padding: 20px 15px;
-        gap: 20px;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+  }
 
-        &__firstColumn {
-            &__h1 {
-                font-size: 2rem;
-                line-height: 1.2;
-            }
+  &__text {
+    @include text;
+    margin-bottom: 3vh;
 
-            &__text {
-                font-size: 0.9rem;
-            }
-        }
-
-        &__secondColumn {
-            &__container {
-                width: 100%;
-                height: 200px;
-            }
-        }
-
-        &__button {
-            padding: 12px 25px;
-            font-size: 0.9rem;
-        }
+    @media (max-width: $tablet-breakpoint) {
+      font-size: 1rem;
+      margin-bottom: 20px;
     }
 
-    &__firstColumn {
-        height: 302px;
-        width: 433px;
-        transform: translateY(-50px);
-
-        &__h1 {
-            @include h1;
-            margin-bottom: 2vh;
-        }
-
-        &__text {
-            @include text;
-            margin-bottom: 3vh;
-        }
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 0.9rem;
     }
+  }
 
-    &__secondColumn {
-        width: 400px;
-        height: 500px;
-        transform: translateY(-50px);
-        gap: 15px;
-        columns: 2;
-        overflow: hidden;
-        background: transparent;
+  &__second-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 400px;
+    transform: translateY(-50px);
 
-        &__container {
-            width: 150px;
-            height: 250px;
-            background-color: darkcyan;
-            display: flex;
-            flex-direction: column;
-        }
+    @media (max-width: $tablet-breakpoint) {
+      width: 100%;
+      max-width: 600px;
+      transform: none;
     }
+  }
 
-    &__button {
-        @include buttonGreen;
+  &__item {
+    width: 150px;
+    height: 250px;
+    background-color: darkcyan;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $mobile-breakpoint) {
+      width: 100%;
+      height: 200px;
     }
+  }
+
+  &__button {
+    @include buttonGreen;
+
+    @media (max-width: $mobile-breakpoint) {
+      padding: 12px 25px;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    min-height: 600px;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    min-height: 500px;
+    padding: 20px 15px;
+    gap: 20px;
+  }
 }

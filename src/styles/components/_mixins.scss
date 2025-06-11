@@ -1,4 +1,6 @@
 @use "sass:color";
+$tablet-breakpoint: 768px;
+$mobile-breakpoint: 480px;
 
 @mixin h1 {
     font-family: Clip;
@@ -61,3 +63,31 @@ $baseColor: #76B72A;
     cursor: pointer;
     background: transparent;
 }
+
+@mixin logo($size: 100px, $hover-effect: true) {
+    // Базовые стили
+    width: $size;
+    height: $size;
+    cursor: pointer;
+    object-fit: contain; // Чтобы логотип не искажался
+    
+    // Эффект при наведении (опционально)
+    @if $hover-effect {
+      transition: transform 0.2s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    
+    // Адаптивные стили (используем ваши переменные брейкпоинтов)
+    @media (max-width: $tablet-breakpoint) {
+      width: $size * 0.8;
+      height: $size * 0.8;
+    }
+    
+    @media (max-width: $mobile-breakpoint) {
+      width: $size * 0.6;
+      height: $size * 0.6;
+    }
+  }
