@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=Molkom&lang=ru_RU"></script> -->
 
     <title>Адыгейский молкомбинат</title>
@@ -43,113 +45,130 @@
         <!-- Под шапкой, Head -->
         <section class="section-head">
             <div class="section-head__content">
-              <div class="section-head__first-column">
-                <h1 class="section-head__title">
-                  ЗАО «Молкомбинат «Адыгейский»
-                </h1>
-                <p class="section-head__text">
-                  Одно из ведущих предприятий промышленности Республики Адыгея
-                </p>
-                <button class="section-head__button">Подробнее</button>
-              </div>
-          
-              <div class="section-head__second-column">
-                <div class="section-head__item">1</div>
-                <div class="section-head__item">2</div>
-                <div class="section-head__item">3</div>
-                <div class="section-head__item">4</div>
-              </div>
+                <div class="section-head__first-column">
+                    <h1 class="section-head__title">
+                        ЗАО «Молкомбинат «Адыгейский»
+                    </h1>
+                    <p class="section-head__text">
+                        Одно из ведущих предприятий промышленности Республики Адыгея
+                    </p>
+                    <button class="section-head__button">Подробнее</button>
+                </div>
+
+                <div class="section-head__second-column">
+                    <div class="section-head__item">1</div>
+                    <div class="section-head__item">2</div>
+                    <div class="section-head__item">3</div>
+                    <div class="section-head__item">4</div>
+                </div>
             </div>
             <div class="section-head__decor decor-1"></div>
             <div class="section-head__decor decor-2"></div>
-          </section>
+        </section>
 
 
         <!-- Пуопулярное -->
-        <!-- <section class="sectionPopular">
+        <section class="sectionPopular">
             <h2 class="sectionPopular__title">ПОПУЛЯРНЫЕ ЛИНЕЙКИ</h2>
 
             <div class="sectionPopular__gradient-wrapper">
+                <!-- Кнопки навигации -->
+                <button class="sectionPopular__button sectionPopular__button--prev">
+                    <svg class="sectionPopular__button-icon" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+                    </svg>
+                </button>
+
+                <button class="sectionPopular__button sectionPopular__button--next">
+                    <svg class="sectionPopular__button-icon" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+                    </svg>
+                </button>
+
                 <div class="swiper sectionPopular__swiper">
                     <div class="swiper-wrapper">
 
+                        <!-- Слайд 1 -->
                         <div class="swiper-slide sectionPopular__item">
                             <div class="sectionPopular__image-container">
-                                <img src="./assets/images/blueTvorog.png" alt="Творог"
-                                    class="sectionPopular__itemImage">
+                                <div class="image-wrapper">
+                                    <img src="./assets/images/blueTvorog.png" alt="Творог"
+                                        class="sectionPopular__itemImage">
+                                    <img src="./assets/images/blueTvorog.png" alt="Творог"
+                                        class="image-copy image-copy--left">
+                                    <img src="./assets/images/blueTvorog.png" alt="Творог"
+                                        class="image-copy image-copy--right">
+                                </div>
                             </div>
                             <div class="sectionPopular__content-wrapper">
                                 <h3 class="sectionPopular__itemTitle">Творог Министский</h3>
-                                <p class="sectionPopular__itemDescription">Улучшает жировой обмен,
-                                    профилактика заболеваний
-                                    сердца и сосудов</p>
+                                <p class="sectionPopular__itemDescription">Улучшает жировой обмен, профилактика
+                                    заболеваний сердца и сосудов</p>
                                 <button class="sectionPopular__detailsButton">Подробнее</button>
                             </div>
                         </div>
 
+                        <!-- Слайд 2 -->
                         <div class="swiper-slide sectionPopular__item">
                             <div class="sectionPopular__image-container">
-                                <img src="./assets/images/airan.png" alt="Айран" class="sectionPopular__itemImage">
+                                <div class="image-wrapper">
+                                    <img src="./assets/images/airan.png" alt="Айран" class="sectionPopular__itemImage">
+                                    <img src="./assets/images/airan.png" alt="Айран"
+                                        class="image-copy image-copy--left">
+                                    <img src="./assets/images/airan.png" alt="Айран"
+                                        class="image-copy image-copy--right">
+                                </div>
                             </div>
                             <div class="sectionPopular__content-wrapper">
                                 <h3 class="sectionPopular__itemTitle">Айран</h3>
-                                <p class="sectionPopular__itemDescription">Стимулирует пищеварение,
-                                    улучшает микрофлору кишечника,
-                                    Повышает иммунитет</p>
+                                <p class="sectionPopular__itemDescription">Стимулирует пищеварение, улучшает микрофлору
+                                    кишечника</p>
                                 <button class="sectionPopular__detailsButton">Подробнее</button>
                             </div>
                         </div>
 
+                        <!-- Слайд 3 -->
                         <div class="swiper-slide sectionPopular__item">
                             <div class="sectionPopular__image-container">
-                                <img src="./assets/images/MolokoRed.png" alt="Молоко" class="sectionPopular__itemImage">
+                                <div class="image-wrapper">
+                                    <img src="./assets/images/MolokoRed.png" alt="Молоко"
+                                        class="sectionPopular__itemImage">
+                                    <img src="./assets/images/MolokoRed.png" alt="Молоко"
+                                        class="image-copy image-copy--left">
+                                    <img src="./assets/images/MolokoRed.png" alt="Молоко"
+                                        class="image-copy image-copy--right">
+                                </div>
                             </div>
                             <div class="sectionPopular__content-wrapper">
-                                <h3 class="sectionPopular__itemTitle">
-                                    Молоко
-                                </h3>
-                                <p class="sectionPopular__itemDescription">
-                                    Улучшает работу иммунной
-                                    системы, понижает кровяное
-                                    давление и еще монжество других вещей
-                                </p>
-                                <button class="sectionPopular__detailsButton">
-                                    Подробнее
-                                </button>
+                                <h3 class="sectionPopular__itemTitle">Молоко</h3>
+                                <p class="sectionPopular__itemDescription">Улучшает работу иммунной системы, понижает
+                                    кровяное давление</p>
+                                <button class="sectionPopular__detailsButton">Подробнее</button>
                             </div>
                         </div>
 
+                        <!-- Слайд 4 -->
                         <div class="swiper-slide sectionPopular__item">
                             <div class="sectionPopular__image-container">
-                                <img src="./assets/images/smetana.png" alt="Сметана" class="sectionPopular__itemImage">
+                                <div class="image-wrapper">
+                                    <img src="./assets/images/smetana.png" alt="Сметана"
+                                        class="sectionPopular__itemImage">
+                                    <img src="./assets/images/smetana.png" alt="Сметана"
+                                        class="image-copy image-copy--left">
+                                    <img src="./assets/images/smetana.png" alt="Сметана"
+                                        class="image-copy image-copy--right">
+                                </div>
                             </div>
                             <div class="sectionPopular__content-wrapper">
-                                <h3 class="sectionPopular__itemTitle">
-                                    Сметана
-                                </h3>
-                                <p class="sectionPopular__itemDescription">
-                                    Улучшает работу иммунной
-                                    системы, понижает кровяное
-                                    давление и еще множество другого
-                                </p>
-                                <button class="sectionPopular__detailsButton">
-                                    Подробнее
-                                </button>
+                                <h3 class="sectionPopular__itemTitle">Сметана</h3>
+                                <p class="sectionPopular__itemDescription">Улучшает работу иммунной системы, понижает
+                                    кровяное давление</p>
+                                <button class="sectionPopular__detailsButton">Подробнее</button>
                             </div>
                         </div>
 
                     </div>
                 </div>
-            </div> -->
-
-            <!-- Кнопки навигации -->
-            <div class="sectionPopular__navigation">
-                <button class="sectionPopular__button sectionPopular__button--prev">
-                    ←
-                </button>
-                <button class="sectionPopular__button sectionPopular__button--next">
-                    →
-                </button>
             </div>
         </section>
 

@@ -1,6 +1,12 @@
 import '../src/styles/main.scss';
 import Inputmask from 'inputmask';
+import Swiper from 'swiper';
+import { Navigation, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
 
+// Инициализация как в предыдущем примере
                 //                                                                      HEADER
                 
 const phoneInputs = document.querySelectorAll('.phone-mask');
@@ -160,14 +166,102 @@ document.addEventListener('DOMContentLoaded', function() {
     const firstColumn = document.querySelector('.section-head__first-column');
     
     function updateFirstColumnPosition() {
-      const sectionRect = section.getBoundingClientRect();
-      const scrollProgress = -sectionRect.top / window.innerHeight;
-      
-      const moveDistance = Math.min(Math.max(scrollProgress * 650, 0), 400);
-      
-      firstColumn.style.transform = `translateY(${moveDistance}px)`;
+        const sectionRect = section.getBoundingClientRect();
+        const scrollProgress = -sectionRect.top / window.innerHeight;
+        
+        const moveDistance = Math.min(Math.max(scrollProgress * 650, 0), 400);
+        
+        firstColumn.style.transform = `translateY(${moveDistance}px)`;
     }
     
     window.addEventListener('scroll', updateFirstColumnPosition);
     updateFirstColumnPosition(); // Инициализация
+});
+
+//                                                                                           POPULAR
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Инициализация Swiper
+    const popularSwiper = new Swiper('.sectionPopular__swiper', {
+      modules: [Navigation, Autoplay],
+      loop: false,
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.sectionPopular__button--next',
+        prevEl: '.sectionPopular__button--prev',
+        disabledClass: 'sectionPopular__button--disabled'
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 15
+        },
+        480: {
+          slidesPerView: 1.5,
+          spaceBetween: 20
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 25
+        },
+        768: {
+          slidesPerView: 2.5,
+          spaceBetween: 30
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 40
+        },
+        1280: {
+          slidesPerView: 4.3,
+          spaceBetween: 50
+        }
+      },
+      on: {
+        init: function() {
+          updateNavigationButtons(this);
+        },
+        slideChange: function() {
+          updateNavigationButtons(this);
+        },
+        reachEnd: function() {
+          this.navigation.nextEl.classList.add('sectionPopular__button--disabled');
+        },
+        reachBeginning: function() {
+          this.navigation.prevEl.classList.add('sectionPopular__button--disabled');
+        }
+      }
+    });
+  
+    function updateNavigationButtons(swiper) {
+      swiper.navigation.nextEl.classList.toggle('sectionPopular__button--disabled', swiper.isEnd);
+      swiper.navigation.prevEl.classList.toggle('sectionPopular__button--disabled', swiper.isBeginning);
+    }
+  
+    // Оптимизация анимации при наведении
+    const items = document.querySelectorAll('.sectionPopular__item');
+    items.forEach(item => {
+      const imageWrapper = item.querySelector('.image-wrapper');
+      const originalImg = item.querySelector('.sectionPopular__itemImage');
+      const leftCopy = item.querySelector('.image-copy--left');
+      const rightCopy = item.querySelector('.image-copy--right');
+  
+      item.addEventListener('mouseenter', () => {
+        originalImg.style.transform = 'scale(1.02)';
+        leftCopy.style.opacity = '1';
+        leftCopy.style.transform = 'translateX(-20px) rotate(-45deg) scale(0.8)';
+        rightCopy.style.opacity = '1';
+        rightCopy.style.transform = 'translateX(20px) rotate(45deg) scale(0.8)';
+      });
+  
+      item.addEventListener('mouseleave', () => {
+        originalImg.style.transform = 'scale(1)';
+        leftCopy.style.opacity = '0';
+        leftCopy.style.transform = 'translateX(0) rotate(0)';
+        rightCopy.style.opacity = '0';
+        rightCopy.style.transform = 'translateX(0) rotate(0)';
+      });
+    });
   });
