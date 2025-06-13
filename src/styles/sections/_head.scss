@@ -6,11 +6,11 @@ $mobile-breakpoint: 480px;
 .section-head {
   color: white;
   background: #3262AC;
-  min-height: 100vh;
+  background: linear-gradient(180deg,rgba(50, 98, 172, 1) 70%, rgb(37, 71, 122) 100%);
+  min-height: 120vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5vw;
   padding: 20px;
   box-sizing: border-box;
   position: relative;
@@ -19,124 +19,169 @@ $mobile-breakpoint: 480px;
   &::before {
     content: '';
     position: absolute;
-
     width: 100%;
-    min-height: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: url('@/assets/images/background-image.svg');
-    // background-repeat: repeat;
+    background-repeat: repeat;
     mix-blend-mode: soft-light;
-    z-index: 0;
+    z-index: 1;
   }
 
+  &__decor {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+
+    &.decor-1 {
+      background-image: url('@/assets/images/Union.svg');
+      width: 100%;
+      height: 100%;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+    }
+
+    &.decor-2 {
+      background-image: url('@/assets/images/Vector.svg');
+      width: 100%;
+      height: 100%;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+    }
+
+    @media (max-width: $tablet-breakpoint) {
+      &.decor-1 {
+        width: 100px;
+        height: 100px;
+        right: 10px;
+        bottom: 10px;
+      }
+      
+      &.decor-2 {
+        width: 80px;
+        height: 80px;
+        right: 25px;
+        bottom: 25px;
+      }
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      display: none;
+    }
+  }
+
+  // Контейнер контента
   &__content {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5vw;
-    max-width: 1200px;
     width: 100%;
-    z-index: 1;
+    max-width: 1200px;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20vh 0;
 
     @media (max-width: $tablet-breakpoint) {
       flex-direction: column;
-      gap: 30px;
+      align-items: center;
+      padding: 15vh 0;
     }
   }
 
   &__first-column {
     width: 433px;
-    transform: translateY(-50px);
+    height: 100vh;
+    position: relative;
+    will-change: transform;
+    transition: transform 0.1s linear;
 
     @media (max-width: $tablet-breakpoint) {
-      transform: none;
       width: 100%;
       max-width: 600px;
       text-align: center;
+      margin-bottom: 40px;
     }
   }
 
   &__title {
     @include h1;
     margin-bottom: 2vh;
-
+    
     @media (max-width: $tablet-breakpoint) {
       font-size: 2.5rem;
-      margin-bottom: 15px;
     }
-
+    
     @media (max-width: $mobile-breakpoint) {
       font-size: 2rem;
-      line-height: 1.2;
     }
   }
 
   &__text {
     @include text;
     margin-bottom: 3vh;
-
+    
     @media (max-width: $tablet-breakpoint) {
       font-size: 1rem;
-      margin-bottom: 20px;
     }
-
+    
     @media (max-width: $mobile-breakpoint) {
       font-size: 0.9rem;
     }
   }
 
+  // Вторая колонка (фиксированная позиция)
   &__second-column {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     width: 400px;
-    transform: translateY(-50px);
-    position: relative;
-    top: 50px;
+    position: sticky;
+    top: 50vh;
+    align-self: flex-start;
+    margin-right: 60px;
 
     @media (max-width: $tablet-breakpoint) {
-        display: none;
-      }
-
-      @media (max-width: $mobile-breakpoint) {
-        display: none;
-      }
+      display: none;
+    }
   }
 
   &__item {
     width: 180px;
     height: 250px;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    background: white;
     color: black;
     border-radius: 35px;
+    display: flex;
     justify-content: center;
     align-items: center;
-
+    position: relative;
+    
     &:nth-child(1) {
-        top: 0;
-      }
-      &:nth-child(2) {
-        top: 40px;
-      }
-      &:nth-child(3) {
-        top: 20px;
-      }
-      &:nth-child(4) {
-        top: 80px;
-      }
-
-      @media (max-width: $mobile-breakpoint) {
-        width: 100%;
-        height: 200px;
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 40px;
+    }
+    &:nth-child(3) {
+      top: 20px;
+    }
+    &:nth-child(4) {
+      top: 60px;
     }
   }
 
   &__button {
     @include buttonGreen;
-
+    color: white;
+    
     @media (max-width: $mobile-breakpoint) {
       padding: 12px 25px;
       font-size: 0.9rem;
@@ -144,14 +189,12 @@ $mobile-breakpoint: 480px;
   }
 
   @media (max-width: $tablet-breakpoint) {
-    min-height: 600px;
+    min-height: 150vh;
     padding: 40px 20px;
-    gap: 30px;
   }
 
   @media (max-width: $mobile-breakpoint) {
-    min-height: 500px;
+    min-height: 120vh;
     padding: 20px 15px;
-    gap: 20px;
   }
 }

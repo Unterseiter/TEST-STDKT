@@ -1,39 +1,8 @@
 import '../src/styles/main.scss';
 import Inputmask from 'inputmask';
-// import Swiper from 'swiper';
-// import 'swiper/css';
 
-// const initPopularSwiper = () => {
-//     new Swiper('.sectionPopular__swiper', {
-//         loop: false,
-//         slidesPerView: 'auto',
-//         spaceBetween: 20,
-//         centeredSlides: true,
-//         navigation: {
-//             nextEl: '.sectionPopular__button--next',
-//             prevEl: '.sectionPopular__button--prev',
-//             disabledClass: 'sectionPopular__button--disabled'
-//         },
-//         breakpoints: {
-//             640: {
-//                 slidesPerView: 1.2,
-//                 spaceBetween: 20
-//             },
-//             1024: {
-//                 slidesPerView: 2.5,
-//                 spaceBetween: 30
-//             },
-//             1280: {
-//                 slidesPerView: 3,
-//                 spaceBetween: 40
-//             }
-//         }
-//     });
-// };
-
-// document.addEventListener('DOMContentLoaded', initPopularSwiper);
-
-
+                //                                                                      HEADER
+                
 const phoneInputs = document.querySelectorAll('.phone-mask');
 const im = new Inputmask('+7 (999) 999-99-99');
 im.mask(phoneInputs);
@@ -180,4 +149,25 @@ document.addEventListener('DOMContentLoaded', function() {
         closeMenu();
       }
     });
+  });
+
+
+
+//                                                                                           HEAD
+
+document.addEventListener('DOMContentLoaded', function() {
+    const section = document.querySelector('.section-head');
+    const firstColumn = document.querySelector('.section-head__first-column');
+    
+    function updateFirstColumnPosition() {
+      const sectionRect = section.getBoundingClientRect();
+      const scrollProgress = -sectionRect.top / window.innerHeight;
+      
+      const moveDistance = Math.min(Math.max(scrollProgress * 650, 0), 400);
+      
+      firstColumn.style.transform = `translateY(${moveDistance}px)`;
+    }
+    
+    window.addEventListener('scroll', updateFirstColumnPosition);
+    updateFirstColumnPosition(); // Инициализация
   });
