@@ -12,8 +12,9 @@
 
   &__title {
     @include h1;
-    text-align: center;
+    text-align: start;
     margin-bottom: 4rem;
+    margin-left: 7vw;
     padding: 0 2rem;
     color: #2a2a2a;
   }
@@ -130,7 +131,7 @@
     }
     
     .sectionPopular__itemImage {
-      transform: scale(0.2);
+      transform: scale(1.02);
     }
   }
 

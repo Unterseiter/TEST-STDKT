@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.36",
+    "@studio-freight/lenis": "^1.0.42",
     "inputmask": "^5.0.9",
     "lodash": "^4.17.21",
     "swiper": "^11.2.6"

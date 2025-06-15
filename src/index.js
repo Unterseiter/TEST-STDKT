@@ -5,8 +5,30 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
+import Lenis from '@studio-freight/lenis';
 
-// Инициализация как в предыдущем примере
+const lenis = new Lenis({ smooth: true });
+
+// Элемент, где скролл должен быть обычным
+const noSmoothScrollBlock = document.querySelector('.sectionMap');
+
+// Отключаем Lenis при входе в блок
+noSmoothScrollBlock.addEventListener('mouseenter', () => {
+  lenis.stop();
+});
+
+// Включаем обратно при выходе
+noSmoothScrollBlock.addEventListener('mouseleave', () => {
+  lenis.start();
+});
+
+// Обязательный RAF-цикл
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
                 //                                                                      HEADER
                 
 const phoneInputs = document.querySelectorAll('.phone-mask');
