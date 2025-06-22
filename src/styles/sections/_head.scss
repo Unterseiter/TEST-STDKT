@@ -1,12 +1,13 @@
 @use '../components/mixins' as *;
 
 $tablet-breakpoint: 768px;
+$big-tablet-breakpoint: 900px;
 $mobile-breakpoint: 480px;
 
 .section-head {
   color: white;
   background: #3262AC;
-  background: linear-gradient(180deg,rgba(50, 98, 172, 1) 70%, rgb(37, 71, 122) 100%);
+  background: linear-gradient(180deg, rgba(50, 98, 172, 1) 70%, rgb(37, 71, 122) 100%);
   min-height: 120vh;
   display: flex;
   align-items: center;
@@ -64,7 +65,7 @@ $mobile-breakpoint: 480px;
         right: 10px;
         bottom: 10px;
       }
-      
+
       &.decor-2 {
         width: 80px;
         height: 80px;
@@ -113,11 +114,11 @@ $mobile-breakpoint: 480px;
   &__title {
     @include h1;
     margin-bottom: 2vh;
-    
+
     @media (max-width: $tablet-breakpoint) {
       font-size: 2.5rem;
     }
-    
+
     @media (max-width: $mobile-breakpoint) {
       font-size: 2rem;
     }
@@ -126,11 +127,11 @@ $mobile-breakpoint: 480px;
   &__text {
     @include text;
     margin-bottom: 3vh;
-    
+
     @media (max-width: $tablet-breakpoint) {
       font-size: 1rem;
     }
-    
+
     @media (max-width: $mobile-breakpoint) {
       font-size: 0.9rem;
     }
@@ -163,8 +164,12 @@ $mobile-breakpoint: 480px;
     position: relative;
     overflow: hidden;
     background-color: #B6E5FF;
-    
-    img{
+
+    @media (max-width: $big-tablet-breakpoint) {
+      height: 35vh;
+    }
+
+    img {
       // width: 50%;
       height: 60%;
       justify-content: center;
@@ -182,7 +187,8 @@ $mobile-breakpoint: 480px;
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 50%; /* Маска покрывает только нижнюю часть */
+      height: 50%;
+      /* Маска покрывает только нижнюю часть */
       background-size: cover;
       -webkit-mask-image: url('@/assets/images/Union.svg');
       mask-image: url('@/assets/images/Union.svg');
@@ -197,27 +203,34 @@ $mobile-breakpoint: 480px;
     &:nth-child(1) {
       top: 0;
       background-color: #B6E5FF;
+
       &::before {
         background: url('@/assets/images/floor-head-bg.png') center/cover no-repeat;
       }
     }
+
     &:nth-child(2) {
       top: 40px;
       background-color: #FFC7E8;
+
       &::before {
         background: url('@/assets/images/floor-2-head-bg.png') center/cover no-repeat;
       }
     }
+
     &:nth-child(3) {
       top: 20px;
       background-color: #B7FFB6;
+
       &::before {
         background: url('@/assets/images/floor-2-head-bg.png') center/cover no-repeat;
       }
     }
+
     &:nth-child(4) {
       top: 60px;
       background-color: #FFE2B6;
+
       &::before {
         background: url('@/assets/images/floor-head-bg.png') center/cover no-repeat;
       }
@@ -227,7 +240,7 @@ $mobile-breakpoint: 480px;
   &__button {
     @include buttonGreen;
     color: white;
-    
+
     @media (max-width: $mobile-breakpoint) {
       padding: 12px 25px;
       font-size: 0.9rem;

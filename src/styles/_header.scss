@@ -47,7 +47,7 @@ $transition-duration: 0.3s;
 
 .header__logo {
   @include logo(80px);
-  
+
   @media (max-width: $mobile-breakpoint) {
     @include logo(60px);
     order: 1;
@@ -88,7 +88,7 @@ $transition-duration: 0.3s;
   height: 20px;
   cursor: pointer;
   z-index: 1001;
-  
+
   @media (max-width: $mobile-breakpoint) {
     display: flex;
     order: 0;
@@ -106,9 +106,11 @@ $transition-duration: 0.3s;
     span:nth-child(1) {
       transform: translateY(8px) rotate(45deg);
     }
+
     span:nth-child(2) {
       opacity: 0;
     }
+
     span:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
     }
@@ -165,7 +167,7 @@ $transition-duration: 0.3s;
 .header__contacts {
   display: flex;
   flex-direction: column;
-  
+
   @media (max-width: $mobile-breakpoint) {
     display: none;
   }
@@ -186,7 +188,7 @@ $transition-duration: 0.3s;
   z-index: 998;
   opacity: 0;
   transition: opacity $transition-duration ease;
-  
+
   &--active {
     display: block;
     opacity: 1;

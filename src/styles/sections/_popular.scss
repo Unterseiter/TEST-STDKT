@@ -21,7 +21,7 @@
 
   &__gradient-wrapper {
     position: relative;
-    
+
     &::before,
     &::after {
       content: '';
@@ -35,12 +35,12 @@
 
     &::before {
       left: 0;
-      background: linear-gradient(90deg, white 30%, rgba(255,255,255,0));
+      background: linear-gradient(90deg, white 30%, rgba(255, 255, 255, 0));
     }
 
     &::after {
       right: 0;
-      background: linear-gradient(270deg, white 30%, rgba(255,255,255,0));
+      background: linear-gradient(270deg, white 30%, rgba(255, 255, 255, 0));
     }
   }
 
@@ -48,12 +48,12 @@
     padding: 0 6rem;
     overflow: visible;
     will-change: transform;
-    
+
     .swiper-slide {
       width: 320px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       transform-origin: center center;
-      
+
       &:hover {
         transform: scale(1.05);
         z-index: 10;
@@ -107,11 +107,11 @@
     opacity: 0;
     z-index: 1;
     filter: brightness(0.95);
-    
+
     &--left {
       transform-origin: left bottom;
     }
-    
+
     &--right {
       transform-origin: right bottom;
     }
@@ -120,16 +120,16 @@
   &__item:hover {
     .image-copy {
       opacity: 0.7;
-      
+
       &--left {
         transform: translateX(-40px) rotate(-45deg);
       }
-      
+
       &--right {
         transform: translateX(40px) rotate(45deg);
       }
     }
-    
+
     .sectionPopular__itemImage {
       transform: scale(1.02);
     }
@@ -177,7 +177,7 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.1);
+      background: rgba(0, 0, 0, 0.1);
       transition: left 0.3s ease;
       z-index: -1;
     }
@@ -185,7 +185,7 @@
     &:hover {
       background: #45a049;
       transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
       &::before {
         left: 0;
@@ -201,7 +201,7 @@
     height: 50px;
     border-radius: 50%;
     background: white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
@@ -211,27 +211,27 @@
     cursor: pointer;
     opacity: 1;
     visibility: visible;
-    
+
     &:hover {
       transform: translateY(-50%) scale(1.1);
       background: #f5f5f5;
     }
-    
+
     &--prev {
       left: 20px;
     }
-    
+
     &--next {
       right: 20px;
     }
-    
+
     &-icon {
       width: 24px;
       height: 24px;
       fill: #2a2a2a;
       transition: fill 0.3s ease;
     }
-    
+
     &--disabled {
       opacity: 0;
       visibility: hidden;
@@ -242,6 +242,7 @@
 
   @media (max-width: 1280px) {
     &__gradient-wrapper {
+
       &::before,
       &::after {
         width: 150px;
@@ -251,12 +252,13 @@
 
   @media (max-width: 1024px) {
     &__gradient-wrapper {
+
       &::before,
       &::after {
         width: 100px;
       }
     }
-    
+
     &__swiper {
       padding: 0 4rem;
     }
@@ -289,7 +291,7 @@
     &__button {
       width: 40px;
       height: 40px;
-      
+
       &-icon {
         width: 20px;
         height: 20px;
@@ -303,6 +305,7 @@
     }
 
     &__gradient-wrapper {
+
       &::before,
       &::after {
         width: 50px;
@@ -314,15 +317,15 @@
     &__swiper {
       padding: 0 2rem;
     }
-    
+
     &__button {
       width: 35px;
       height: 35px;
-      
+
       &--prev {
         left: 5px;
       }
-      
+
       &--next {
         right: 5px;
       }

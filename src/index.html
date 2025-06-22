@@ -2,438 +2,576 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=Molkom&lang=ru_RU"></script> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=Molkom&lang=ru_RU"></script> -->
 
-    <title>Адыгейский молкомбинат</title>
+  <title>Адыгейский молкомбинат</title>
 </head>
 
 <body>
-    <div class="site-wrapper">
-        <header class="header">
-            <div class="header__burger">
-                <span></span>
-                <span></span>
-                <span></span>
+  <div class="site-wrapper">
+    <header class="header">
+      <div class="header__burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <img src="./assets/images/logo.svg" alt="Logo" class="header__logo">
+
+      <nav class="header__nav">
+        <button class="header__special-btn">
+          <img src="./assets/images/Hamburger Menu.svg" alt="Hamburger Menu">
+          Каталог
+          <div class="header__message">98</div>
+        </button>
+        <button class="header__nav-btn">Главная</button>
+        <button class="header__nav-btn">О заводе</button>
+        <button class="header__nav-btn">Где купить</button>
+        <button class="header__nav-btn">Контакты</button>
+      </nav>
+
+      <div class="header__contacts">
+        <p>+7 (8772) 56 95 20</p>
+        <p class="underline">обратная связь</p>
+      </div>
+
+      <div class="header__overlay"></div>
+    </header>
+
+    <!-- Под шапкой, Head -->
+    <section class="section-head">
+      <div class="section-head__content">
+        <div class="section-head__first-column">
+          <h1 class="section-head__title">
+            ЗАО «Молкомбинат «Адыгейский»
+          </h1>
+          <p class="section-head__text">
+            Одно из ведущих предприятий промышленности Республики Адыгея
+          </p>
+          <button class="section-head__button">Подробнее</button>
+        </div>
+
+        <div class="section-head__second-column">
+          <div class="section-head__item">
+            <h2 style="margin: 10%; font-weight: 500;">НЕЖНЕЙШИЙ <br>ТВОРОГ</h2>
+            <img src="/src/assets/images/blueTvorog.png" alt="ТВОРОГ">
+          </div>
+          <div class="section-head__item">
+            <h2 style="margin: 10%; font-weight: 500;">НАТУРАЛЬНОЕ <br>МОЛОКО</h2>
+            <img src="/src/assets/images/MolokoRed.png" alt="МОЛОКО">
+          </div>
+          <div class="section-head__item">
+            <h2 style="margin: 10%; font-weight: 500;">ВКУСНЕЙШИЕ <br>ЙОГУРТЫ</h2>
+            <img src="/src/assets/images/yougurt.png" alt="ЙОГУРТ">
+          </div>
+          <div class="section-head__item">
+            <h2 style="margin: 10%; font-weight: 500;">ПОЛЕЗНАЯ <br>СМЕТАНА</h2>
+            <img src="/src/assets/images/smetana.png" alt="СМЕТАНА">
+          </div>
+        </div>
+      </div>
+      <div class="section-head__decor decor-1"></div>
+      <div class="section-head__decor decor-2"></div>
+    </section>
+
+
+    <!-- Пуопулярное -->
+    <section class="sectionPopular">
+      <h2 class="sectionPopular__title">ПОПУЛЯРНЫЕ ЛИНЕЙКИ</h2>
+
+      <div class="sectionPopular__gradient-wrapper">
+        <!-- Кнопки навигации -->
+        <button class="sectionPopular__button sectionPopular__button--prev">
+          <svg class="sectionPopular__button-icon" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+          </svg>
+        </button>
+
+        <button class="sectionPopular__button sectionPopular__button--next">
+          <svg class="sectionPopular__button-icon" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+          </svg>
+        </button>
+
+        <div class="swiper sectionPopular__swiper">
+          <div class="swiper-wrapper">
+
+            <!-- Слайд 1 -->
+            <div class="swiper-slide sectionPopular__item">
+              <div class="sectionPopular__image-container">
+                <div class="image-wrapper">
+                  <img src="./assets/images/blueTvorog.png" alt="Творог" class="sectionPopular__itemImage">
+                  <img src="./assets/images/blueTvorog.png" alt="Творог" class="image-copy image-copy--left">
+                  <img src="./assets/images/blueTvorog.png" alt="Творог" class="image-copy image-copy--right">
+                </div>
+              </div>
+              <div class="sectionPopular__content-wrapper">
+                <h3 class="sectionPopular__itemTitle">Творог Министский</h3>
+                <p class="sectionPopular__itemDescription">Улучшает жировой обмен, профилактика
+                  заболеваний сердца и сосудов</p>
+                <button class="sectionPopular__detailsButton">Подробнее</button>
+              </div>
             </div>
 
-            <img src="./assets/images/logo.svg" alt="Logo" class="header__logo">
-
-            <nav class="header__nav">
-                <button class="header__special-btn">
-                    <img src="./assets/images/Hamburger Menu.svg" alt="Hamburger Menu">
-                    Каталог
-                    <div class="header__message">98</div>
-                </button>
-                <button class="header__nav-btn">Главная</button>
-                <button class="header__nav-btn">О заводе</button>
-                <button class="header__nav-btn">Где купить</button>
-                <button class="header__nav-btn">Контакты</button>
-            </nav>
-
-            <div class="header__contacts">
-                <p>+7 (8772) 56 95 20</p>
-                <p class="underline">обратная связь</p>
+            <!-- Слайд 2 -->
+            <div class="swiper-slide sectionPopular__item">
+              <div class="sectionPopular__image-container">
+                <div class="image-wrapper">
+                  <img src="./assets/images/airan.png" alt="Айран" class="sectionPopular__itemImage">
+                  <img src="./assets/images/airan.png" alt="Айран" class="image-copy image-copy--left">
+                  <img src="./assets/images/airan.png" alt="Айран" class="image-copy image-copy--right">
+                </div>
+              </div>
+              <div class="sectionPopular__content-wrapper">
+                <h3 class="sectionPopular__itemTitle">Айран</h3>
+                <p class="sectionPopular__itemDescription">Стимулирует пищеварение, улучшает микрофлору
+                  кишечника</p>
+                <button class="sectionPopular__detailsButton">Подробнее</button>
+              </div>
             </div>
 
-            <div class="header__overlay"></div>
-        </header>
-
-        <!-- Под шапкой, Head -->
-        <section class="section-head">
-            <div class="section-head__content">
-                <div class="section-head__first-column">
-                    <h1 class="section-head__title">
-                        ЗАО «Молкомбинат «Адыгейский»
-                    </h1>
-                    <p class="section-head__text">
-                        Одно из ведущих предприятий промышленности Республики Адыгея
-                    </p>
-                    <button class="section-head__button">Подробнее</button>
+            <!-- Слайд 3 -->
+            <div class="swiper-slide sectionPopular__item">
+              <div class="sectionPopular__image-container">
+                <div class="image-wrapper">
+                  <img src="./assets/images/MolokoRed.png" alt="Молоко" class="sectionPopular__itemImage">
+                  <img src="./assets/images/MolokoRed.png" alt="Молоко" class="image-copy image-copy--left">
+                  <img src="./assets/images/MolokoRed.png" alt="Молоко" class="image-copy image-copy--right">
                 </div>
-
-                <div class="section-head__second-column">
-                    <div class="section-head__item">
-                        <h2 style="margin: 10%; font-weight: 500;">НЕЖНЕЙШИЙ <br>ТВОРОГ</h2>
-                        <img src="/src/assets/images/blueTvorog.png" alt="ТВОРОГ">
-                    </div>
-                    <div class="section-head__item">
-                        <h2 style="margin: 10%; font-weight: 500;">НАТУРАЛЬНОЕ <br>МОЛОКО</h2>
-                        <img src="/src/assets/images/MolokoRed.png" alt="МОЛОКО">
-                    </div>
-                    <div class="section-head__item">
-                        <h2 style="margin: 10%; font-weight: 500;">ВКУСНЕЙШИЕ <br>ЙОГУРТЫ</h2>
-                        <img src="/src/assets/images/yougurt.png" alt="ЙОГУРТ">
-                    </div>
-                    <div class="section-head__item">
-                        <h2 style="margin: 10%; font-weight: 500;">ПОЛЕЗНАЯ <br>СМЕТАНА</h2>
-                        <img src="/src/assets/images/smetana.png" alt="СМЕТАНА">
-                    </div>
-                </div>
-            </div>
-            <div class="section-head__decor decor-1"></div>
-            <div class="section-head__decor decor-2"></div>
-        </section>
-
-
-        <!-- Пуопулярное -->
-        <section class="sectionPopular">
-            <h2 class="sectionPopular__title">ПОПУЛЯРНЫЕ ЛИНЕЙКИ</h2>
-
-            <div class="sectionPopular__gradient-wrapper">
-                <!-- Кнопки навигации -->
-                <button class="sectionPopular__button sectionPopular__button--prev">
-                    <svg class="sectionPopular__button-icon" viewBox="0 0 24 24" width="24" height="24">
-                        <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
-                    </svg>
-                </button>
-
-                <button class="sectionPopular__button sectionPopular__button--next">
-                    <svg class="sectionPopular__button-icon" viewBox="0 0 24 24" width="24" height="24">
-                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
-                    </svg>
-                </button>
-
-                <div class="swiper sectionPopular__swiper">
-                    <div class="swiper-wrapper">
-
-                        <!-- Слайд 1 -->
-                        <div class="swiper-slide sectionPopular__item">
-                            <div class="sectionPopular__image-container">
-                                <div class="image-wrapper">
-                                    <img src="./assets/images/blueTvorog.png" alt="Творог"
-                                        class="sectionPopular__itemImage">
-                                    <img src="./assets/images/blueTvorog.png" alt="Творог"
-                                        class="image-copy image-copy--left">
-                                    <img src="./assets/images/blueTvorog.png" alt="Творог"
-                                        class="image-copy image-copy--right">
-                                </div>
-                            </div>
-                            <div class="sectionPopular__content-wrapper">
-                                <h3 class="sectionPopular__itemTitle">Творог Министский</h3>
-                                <p class="sectionPopular__itemDescription">Улучшает жировой обмен, профилактика
-                                    заболеваний сердца и сосудов</p>
-                                <button class="sectionPopular__detailsButton">Подробнее</button>
-                            </div>
-                        </div>
-
-                        <!-- Слайд 2 -->
-                        <div class="swiper-slide sectionPopular__item">
-                            <div class="sectionPopular__image-container">
-                                <div class="image-wrapper">
-                                    <img src="./assets/images/airan.png" alt="Айран" class="sectionPopular__itemImage">
-                                    <img src="./assets/images/airan.png" alt="Айран"
-                                        class="image-copy image-copy--left">
-                                    <img src="./assets/images/airan.png" alt="Айран"
-                                        class="image-copy image-copy--right">
-                                </div>
-                            </div>
-                            <div class="sectionPopular__content-wrapper">
-                                <h3 class="sectionPopular__itemTitle">Айран</h3>
-                                <p class="sectionPopular__itemDescription">Стимулирует пищеварение, улучшает микрофлору
-                                    кишечника</p>
-                                <button class="sectionPopular__detailsButton">Подробнее</button>
-                            </div>
-                        </div>
-
-                        <!-- Слайд 3 -->
-                        <div class="swiper-slide sectionPopular__item">
-                            <div class="sectionPopular__image-container">
-                                <div class="image-wrapper">
-                                    <img src="./assets/images/MolokoRed.png" alt="Молоко"
-                                        class="sectionPopular__itemImage">
-                                    <img src="./assets/images/MolokoRed.png" alt="Молоко"
-                                        class="image-copy image-copy--left">
-                                    <img src="./assets/images/MolokoRed.png" alt="Молоко"
-                                        class="image-copy image-copy--right">
-                                </div>
-                            </div>
-                            <div class="sectionPopular__content-wrapper">
-                                <h3 class="sectionPopular__itemTitle">Молоко</h3>
-                                <p class="sectionPopular__itemDescription">Улучшает работу иммунной системы, понижает
-                                    кровяное давление</p>
-                                <button class="sectionPopular__detailsButton">Подробнее</button>
-                            </div>
-                        </div>
-
-                        <!-- Слайд 4 -->
-                        <div class="swiper-slide sectionPopular__item">
-                            <div class="sectionPopular__image-container">
-                                <div class="image-wrapper">
-                                    <img src="./assets/images/smetana.png" alt="Сметана"
-                                        class="sectionPopular__itemImage">
-                                    <img src="./assets/images/smetana.png" alt="Сметана"
-                                        class="image-copy image-copy--left">
-                                    <img src="./assets/images/smetana.png" alt="Сметана"
-                                        class="image-copy image-copy--right">
-                                </div>
-                            </div>
-                            <div class="sectionPopular__content-wrapper">
-                                <h3 class="sectionPopular__itemTitle">Сметана</h3>
-                                <p class="sectionPopular__itemDescription">Улучшает работу иммунной системы, понижает
-                                    кровяное давление</p>
-                                <button class="sectionPopular__detailsButton">Подробнее</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sectionTraditional">
-            <a id="about"></a>
-            <div class="sectionTraditional__container">
-                <h1 class="sectionTraditional__container__h1">ТРАДИЦИОННАЯ РЕЦЕПТУРА <br> И ВКЛАД В ЗДОРОВОЕ <br>
-                    БУДУЩЕЕ ПОКОЛЕНИЙ</h1>
-                <p class="sectionTraditional__container__text">Мы готовы предложить вам традиционные продукты
-                    под торговой маркой «Майкопская молочная продукция»:
-                    молоко, кефир, сметана, творог, ряженка, айран, которые
-                    отличаются небольшим сроком годности.
-                </p>
-
-                <div class="sectionTraditional__container__blockContainer">
-                    <div class="sectionTraditional__container__blockContainer__block">
-                        <img src="./assets/images/Waterdrops.svg" alt="Waterdrops"
-                            class="sectionTraditional__container__blockContainer__block__image">
-                        Экологическая чистота
-                    </div>
-                    <div class="sectionTraditional__container__blockContainer__blockW">
-                        <img src="./assets/images/Settings Minimalistic.svg" alt="Waterdrops"
-                            class="sectionTraditional__container__blockContainer__block__image">
-                        Традиционные технологии производства
-                    </div>
-                    <div class="sectionTraditional__container__blockContainer__block">
-                        <img src="./assets/images/Leaf.svg" alt="Waterdrops"
-                            class="sectionTraditional__container__blockContainer__block__image">
-                        Натуральные ингредиенты
-                    </div>
-                </div>
-
+              </div>
+              <div class="sectionPopular__content-wrapper">
+                <h3 class="sectionPopular__itemTitle">Молоко</h3>
+                <p class="sectionPopular__itemDescription">Улучшает работу иммунной системы, понижает
+                  кровяное давление</p>
+                <button class="sectionPopular__detailsButton">Подробнее</button>
+              </div>
             </div>
 
-            <div class="sectionTraditional__containerImg">
-                <img src="./assets/images/girl1.svg" alt="Девушка 1" class="sectionTraditional__imageFront">
-                <img src="./assets/images/girl2.svg" alt="Девушка 2" class="sectionTraditional__imageBack">
+            <!-- Слайд 4 -->
+            <div class="swiper-slide sectionPopular__item">
+              <div class="sectionPopular__image-container">
+                <div class="image-wrapper">
+                  <img src="./assets/images/smetana.png" alt="Сметана" class="sectionPopular__itemImage">
+                  <img src="./assets/images/smetana.png" alt="Сметана" class="image-copy image-copy--left">
+                  <img src="./assets/images/smetana.png" alt="Сметана" class="image-copy image-copy--right">
+                </div>
+              </div>
+              <div class="sectionPopular__content-wrapper">
+                <h3 class="sectionPopular__itemTitle">Сметана</h3>
+                <p class="sectionPopular__itemDescription">Улучшает работу иммунной системы, понижает
+                  кровяное давление</p>
+                <button class="sectionPopular__detailsButton">Подробнее</button>
+              </div>
             </div>
-        </section>
 
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section class="sectionHit" style="background-color: rgb(0 0 0 / 40%);">
-            <h1 class="sectionContacts__h1">
+    <section class="section-traditional" id="about">
+      <div class="section-traditional__bg-images">
+        <img src="./assets/images/girl1.svg" alt=""
+          class="section-traditional__bg-image section-traditional__bg-image--front">
+        <img src="./assets/images/girl2.svg" alt=""
+          class="section-traditional__bg-image section-traditional__bg-image--back">
+      </div>
 
-                хиты продаж
-            </h1>
-        </section>
+      <div class="section-traditional__content">
+        <h1 class="section-traditional__title">
+          ТРАДИЦИОННАЯ РЕЦЕПТУРА <br>
+          И ВКЛАД В ЗДОРОВОЕ <br>
+          БУДУЩЕЕ ПОКОЛЕНИЙ
+        </h1>
 
-        <section class="sectionRecipe" style="background-color: rgb(0 0 0 / 40%);">
-            <h1 class="sectionContacts__h1">
-                рецепты от нас
-            </h1>
-            <img src="./assets/images/tape.png" alt="tape" style="width: 100%;">
-        </section>
+        <p class="section-traditional__text">
+          Мы готовы предложить вам традиционные продукты под торговой маркой
+          «Майкопская молочная продукция»: молоко, кефир, сметана, творог,
+          ряженка, айран, которые отличаются небольшим сроком годности.
+        </p>
 
-        <section class="section-geography" id="toBuy">
-            <div class="section-geography__content">
-              <h1 class="section-geography__title">ГЕОГРАФИЯ ПРОДАЖ</h1>
-              <p class="section-geography__text">
-                Вы сможете наши продукты в таких регионах: Астраханская область, 
-                Ростовская область, Ставропольский край, Республика Кабардино-Балкария, 
-                Республика Северная Осетия-Алания, Волгоградская область
-              </p>
-          
-              <button class="section-geography__button">Узнать Подробнее</button>
-              
-              <div class="partners-grid">
-                <div class="partners-grid__row">
-                  <div class="partners-grid__item partners-grid__item--single">
-                    <img src="./assets/images/image 22.svg" alt="Магнит" class="partners-grid__logo">
-                  </div>
-                  <div class="partners-grid__item partners-grid__item--double">
-                    <img src="./assets/images/image 24.svg" alt="Перекресток" class="partners-grid__logo">
-                  </div>
-                  <div class="partners-grid__item partners-grid__item--single">
-                    <img src="./assets/images/image 23.svg" alt="Пятерочка" class="partners-grid__logo">
-                  </div>
+        <div class="benefits-row">
+          <div class="benefits-item">
+            <img src="./assets/images/Waterdrops.svg" alt="Капли воды" class="benefits-item__icon">
+            <span class="benefits-item__text">Экологическая чистота</span>
+          </div>
+
+          <div class="benefits-item">
+            <img src="./assets/images/Settings Minimalistic.svg" alt="Шестеренка" class="benefits-item__icon">
+            <span class="benefits-item__text">Традиционные технологии</span>
+          </div>
+
+          <div class="benefits-item">
+            <img src="./assets/images/Leaf.svg" alt="Лист" class="benefits-item__icon">
+            <span class="benefits-item__text">Натуральные ингредиенты</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sectionHit">
+      <div class="sectionHit__container">
+        <h1 class="sectionHit__title">ХИТЫ ПРОДАЖ</h1>
+
+        <div class="swiper sectionHit__swiper">
+          <div class="swiper-wrapper">
+            <!-- Сметана -->
+            <div class="swiper-slide sectionHit__slide">
+              <div class="sectionHit__product">
+                <div class="sectionHit__image-wrapper">
+                  <div class="sectionHit__bg-cloud"></div>
+                  <img src="./assets/images/smetana-hit.png" alt="Сметана 20%" class="sectionHit__product-image">
+                  <img src="./assets/images/gost.png" alt="ГОСТ" class="sectionHit__gost-image">
                 </div>
-                
-                <div class="partners-grid__row">
-                  <div class="partners-grid__item partners-grid__item--single">
-                    <img src="./assets/images/image 27.svg" alt="Ашан" class="partners-grid__logo">
-                  </div>
-                  <div class="partners-grid__item partners-grid__item--single">
-                    <img src="./assets/images/image 26.svg" alt="Лента" class="partners-grid__logo">
-                  </div>
-                  <div class="partners-grid__item partners-grid__item--double">
-                    <img src="./assets/images/image 25.svg" alt="Окей" class="partners-grid__logo">
-                  </div>
+                <div class="sectionHit__product-info">
+                  <h3 class="sectionHit__product-name">Сметана 20%</h3>
+                  <p class="sectionHit__product-detail">Упаковка: 300 г</p>
+                  <p class="sectionHit__product-detail">Срок годности: 14 суток</p>
                 </div>
-                
-                <div class="partners-grid__row">
-                  <div class="partners-grid__item partners-grid__item--double">
-                    <img src="./assets/images/image 25.svg" alt="Окей" class="partners-grid__logo">
-                  </div>
-                  <div class="partners-grid__item partners-grid__item--double">
-                    <img src="./assets/images/image 24.svg" alt="Победа" class="partners-grid__logo">
+              </div>
+            </div>
+
+            <!-- Творог -->
+            <div class="swiper-slide sectionHit__slide">
+              <div class="sectionHit__product">
+                <div class="sectionHit__image-wrapper">
+                  <div class="sectionHit__bg-cloud"></div>
+                  <img src="./assets/images/tvorog-hit.png" alt="Творог" class="sectionHit__product-image">
+                  <img src="./assets/images/gost.png" alt="ГОСТ" class="sectionHit__gost-image">
+                </div>
+                <div class="sectionHit__product-info">
+                  <h3 class="sectionHit__product-name">Творог Майкопский</h3>
+                  <p class="sectionHit__product-detail">Упаковка: 170 г</p>
+                  <p class="sectionHit__product-detail">Срок годности: 10 суток</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Масло -->
+            <div class="swiper-slide sectionHit__slide">
+              <div class="sectionHit__product">
+                <div class="sectionHit__image-wrapper">
+                  <div class="sectionHit__bg-cloud"></div>
+                  <img src="./assets/images/butter-hit.png" alt="Масло 72,5%" class="sectionHit__product-image">
+                  <img src="./assets/images/gost.png" alt="ГОСТ" class="sectionHit__gost-image">
+                </div>
+                <div class="sectionHit__product-info">
+                  <h3 class="sectionHit__product-name">Масло 72,5%</h3>
+                  <p class="sectionHit__product-detail">Упаковка: 170 г</p>
+                  <p class="sectionHit__product-detail">Срок годности: 120 суток</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Молоко -->
+            <div class="swiper-slide sectionHit__slide">
+              <div class="sectionHit__product">
+                <div class="sectionHit__image-wrapper">
+                  <div class="sectionHit__bg-cloud"></div>
+                  <img src="./assets/images/mleko-hit.png" alt="Молоко 2,5%" class="sectionHit__product-image">
+                  <img src="./assets/images/gost.png" alt="ГОСТ" class="sectionHit__gost-image">
+                </div>
+                <div class="sectionHit__product-info">
+                  <h3 class="sectionHit__product-name">Молоко 2,5%</h3>
+                  <p class="sectionHit__product-detail">Упаковка: 900 г.1 л.</p>
+                  <p class="sectionHit__product-detail">Срок годности: 9 суток</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sectionHit__button sectionHit__button--prev"></div>
+          <div class="sectionHit__button sectionHit__button--next"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sectionRecipe">
+      <div class="sectionRecipe__container">
+        <h1 class="sectionRecipe__title">РЕЦЕПТЫ ОТ НАС</h1>
+
+        <div class="sectionRecipe__categories">
+          <button class="sectionRecipe__category active" data-category="all">Все подборки</button>
+          <button class="sectionRecipe__category" data-category="dessert">Десерт</button>
+          <button class="sectionRecipe__category" data-category="breakfast">Завтрак</button>
+          <button class="sectionRecipe__category" data-category="salad">Салаты</button>
+          <button class="sectionRecipe__category" data-category="soup">Супы</button>
+        </div>
+
+        <div class="swiper sectionRecipe__swiper">
+          <div class="swiper-wrapper">
+            <!-- Оладьи -->
+            <div class="swiper-slide sectionRecipe__slide" data-category="breakfast">
+              <div class="sectionRecipe__card">
+                <div class="sectionRecipe__content">
+                  <h3 class="sectionRecipe__name">ОЛАДЬИ<br>С ТВОРОГОМ</h3>
+                  <p class="sectionRecipe__category-label">Завтрак</p>
+                  <p class="sectionRecipe__time">35 минут</p>
+                </div>
+                <div class="sectionRecipe__image-container">
+                  <div class="sectionRecipe__image-mask">
+                    <img src="./assets/images/olad.png" alt="Оладьи с творогом" class="sectionRecipe__image">
                   </div>
                 </div>
               </div>
             </div>
-          
-            <div class="section-geography__map">
-              <img src="./assets/images/Mask group.svg" alt="Карта регионов" class="section-geography__map-image">
-            </div>
-          </section>
 
-        <section class="sectionContacts">
-            <a id="contacts"></a>
-            <h1 class="sectionContacts__h1">КОНТАКТЫ</h1>
-
-            <div class="sectionContacts__container">
-
-                <div class="sectionContacts__container__firstColumn">
-                    <h2 class="sectionContacts__h2">Свяжитесь с нами</h2>
-
-                    <div class="contacts-list">
-                        <div class="contact-item">
-                            <span class="contact-label">Адрес</span>
-                            <p class="contact-text">г. Майкоп, ул. Транспортная, 5</p>
-                        </div>
-
-                        <div class="contact-item">
-                            <span class="contact-label">Приемная</span>
-                            <a href="tel:+78772536873" class="contact-text">+7 (8772) 53 68 73</a>
-                            <a href="mailto:info@molkom-adyg.ru" class="contact-text">info@molkom-adyg.ru</a>
-                        </div>
-
-                        <div class="contact-item">
-                            <span class="contact-label">Отдел продаж</span>
-                            <a href="tel:+78772569520" class="contact-text">+7 (8772) 56 95 20</a>
-                            <a href="tel:+78772530646" class="contact-text">+7 (8772) 53 06 46</a>
-                            <a href="mailto:otdelprod@molkom-adyg.ru" class="contact-text">otdelprod@molkom-adyg.ru</a>
-                        </div>
-                    </div>
-
-                    <button class="sectionContacts__button">Все контакты</button>
+            <!-- Пончики -->
+            <div class="swiper-slide sectionRecipe__slide" data-category="dessert">
+              <div class="sectionRecipe__card">
+                <div class="sectionRecipe__content">
+                  <h3 class="sectionRecipe__name">ПОНЧИКИ<br>ИЗ ТВОРОГА</h3>
+                  <p class="sectionRecipe__category-label">Десерт</p>
+                  <p class="sectionRecipe__time">35 минут</p>
                 </div>
-
-                <div class="sectionContacts__container__secondColumn">
-                    <h2 class="sectionContacts__h2">Напишите нам</h2>
-
-                    <form class="contact-form">
-                        <div class="form-row">
-                            <div class="input-group">
-                                <label>Ваше имя</label>
-                                <input type="text" placeholder="Напишите имя..." class="form-input" required>
-                            </div>
-
-                            <div class="input-group">
-                                <label>Ваш телефон</label>
-                                <input type="tel" placeholder="+7 (___) ___-__-__" class="form-input phone-mask"
-                                    required>
-                            </div>
-                        </div>
-
-                        <div class="input-group">
-                            <label>Ваш вопрос или комментарий</label>
-                            <textarea class="form-input textarea" placeholder="Напишите вопрос или комментарий..."
-                                rows="4" required></textarea>
-                        </div>
-
-                        <div class="form-submit-wrapper">
-                            <button type="submit" class="sectionContacts__button">Отправить</button>
-                            <div class="success-message">Сообщение успешно отправлено!</div>
-                        </div>
-                    </form>
-
-                    <p class="form-notice">Отправляя форму, вы даете согласие на обработку ваших персональных данных.
-                    </p>
+                <div class="sectionRecipe__image-container">
+                  <div class="sectionRecipe__image-mask">
+                    <img src="./assets/images/ponchik.png" alt="Пончики из творога" class="sectionRecipe__image">
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
+
+            <!-- Запеканка -->
+            <div class="swiper-slide sectionRecipe__slide" data-category="breakfast">
+              <div class="sectionRecipe__card">
+                <div class="sectionRecipe__content">
+                  <h3 class="sectionRecipe__name">ТВОРОЖНАЯ<br>ЗАПЕКАНКА</h3>
+                  <p class="sectionRecipe__category-label">Завтрак</p>
+                  <p class="sectionRecipe__time">35 минут</p>
+                </div>
+                <div class="sectionRecipe__image-container">
+                  <div class="sectionRecipe__image-mask">
+                    <img src="./assets/images/zapek.png" alt="Творожная запеканка" class="sectionRecipe__image">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Кулич -->
+            <div class="swiper-slide sectionRecipe__slide" data-category="dessert">
+              <div class="sectionRecipe__card">
+                <div class="sectionRecipe__content">
+                  <h3 class="sectionRecipe__name">КУЛИЧ<br>КРАФФИН</h3>
+                  <p class="sectionRecipe__category-label">Десерт</p>
+                  <p class="sectionRecipe__time">35 минут</p>
+                </div>
+                <div class="sectionRecipe__image-container">
+                  <div class="sectionRecipe__image-mask">
+                    <img src="./assets/images/kulich.png" alt="Кулич Краффин" class="sectionRecipe__image">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sectionRecipe__button sectionRecipe__button--prev"></div>
+          <div class="sectionRecipe__button sectionRecipe__button--next"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-geography" id="toBuy">
+      <div class="section-geography__content">
+        <h1 class="section-geography__title">ГЕОГРАФИЯ ПРОДАЖ</h1>
+        <p class="section-geography__text">
+          Вы сможете наши продукты в таких регионах: Астраханская область,
+          Ростовская область, Ставропольский край, Республика Кабардино-Балкария,
+          Республика Северная Осетия-Алания, Волгоградская область
+        </p>
+
+        <button class="section-geography__button">Узнать Подробнее</button>
+
+        <div class="partners-grid">
+          <div class="partners-grid__row">
+            <div class="partners-grid__item partners-grid__item--single">
+              <img src="./assets/images/image 22.svg" alt="Магнит" class="partners-grid__logo">
+            </div>
+            <div class="partners-grid__item partners-grid__item--double">
+              <img src="./assets/images/image 24.svg" alt="Перекресток" class="partners-grid__logo">
+            </div>
+            <div class="partners-grid__item partners-grid__item--single">
+              <img src="./assets/images/image 23.svg" alt="Пятерочка" class="partners-grid__logo">
+            </div>
+          </div>
+
+          <div class="partners-grid__row">
+            <div class="partners-grid__item partners-grid__item--single">
+              <img src="./assets/images/image 27.svg" alt="Ашан" class="partners-grid__logo">
+            </div>
+            <div class="partners-grid__item partners-grid__item--single">
+              <img src="./assets/images/image 26.svg" alt="Лента" class="partners-grid__logo">
+            </div>
+            <div class="partners-grid__item partners-grid__item--double">
+              <img src="./assets/images/image 25.svg" alt="Окей" class="partners-grid__logo">
+            </div>
+          </div>
+
+          <div class="partners-grid__row">
+            <div class="partners-grid__item partners-grid__item--double">
+              <img src="./assets/images/image 25.svg" alt="Окей" class="partners-grid__logo">
+            </div>
+            <div class="partners-grid__item partners-grid__item--double">
+              <img src="./assets/images/image 24.svg" alt="Победа" class="partners-grid__logo">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-geography__map">
+        <img src="./assets/images/Mask group.svg" alt="Карта регионов" class="section-geography__map-image">
+      </div>
+    </section>
+
+    <section class="sectionContacts">
+      <a id="contacts"></a>
+      <h1 class="sectionContacts__h1">КОНТАКТЫ</h1>
+
+      <div class="sectionContacts__container">
+
+        <div class="sectionContacts__container__firstColumn">
+          <h2 class="sectionContacts__h2">Свяжитесь с нами</h2>
+
+          <div class="contacts-list">
+            <div class="contact-item">
+              <span class="contact-label">Адрес</span>
+              <p class="contact-text">г. Майкоп, ул. Транспортная, 5</p>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label">Приемная</span>
+              <a href="tel:+78772536873" class="contact-text">+7 (8772) 53 68 73</a>
+              <a href="mailto:info@molkom-adyg.ru" class="contact-text">info@molkom-adyg.ru</a>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label">Отдел продаж</span>
+              <a href="tel:+78772569520" class="contact-text">+7 (8772) 56 95 20</a>
+              <a href="tel:+78772530646" class="contact-text">+7 (8772) 53 06 46</a>
+              <a href="mailto:otdelprod@molkom-adyg.ru" class="contact-text">otdelprod@molkom-adyg.ru</a>
+            </div>
+          </div>
+
+          <button class="sectionContacts__button">Все контакты</button>
+        </div>
+
+        <div class="sectionContacts__container__secondColumn">
+          <h2 class="sectionContacts__h2">Напишите нам</h2>
+
+          <form class="contact-form">
+            <div class="form-row">
+              <div class="input-group">
+                <label>Ваше имя</label>
+                <input type="text" placeholder="Напишите имя..." class="form-input" required>
+              </div>
+
+              <div class="input-group">
+                <label>Ваш телефон</label>
+                <input type="tel" placeholder="+7 (___) ___-__-__" class="form-input phone-mask" required>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label>Ваш вопрос или комментарий</label>
+              <textarea class="form-input textarea" placeholder="Напишите вопрос или комментарий..." rows="4"
+                required></textarea>
+            </div>
+
+            <div class="form-submit-wrapper">
+              <button type="submit" class="sectionContacts__button">Отправить</button>
+              <div class="success-message">Сообщение успешно отправлено!</div>
+            </div>
+          </form>
+
+          <p class="form-notice">Отправляя форму, вы даете согласие на обработку ваших персональных данных.
+          </p>
+        </div>
+      </div>
+    </section>
 
 
-        <section id="yandex-map" class="sectionMap">
-        </section>
+    <section id="yandex-map" class="sectionMap">
+    </section>
 
 
-        <footer class="footer">
-            <div class="footer__column">
-                <img src="./assets/images/logo.svg" alt="logo" class="footer__column__img">
-                <h1 class="footer__column__h1">
-                    ЗАО «Молкомбинат «Адыгейский»
-                </h1>
-                <p class="footer__column__text">
-                    Мы готовы предложить вам традиционные продукты под торговой маркой «Майкопская молочная продукция»:
-                    молоко, кефир, сметана, творог, ряженка, айран, которые отличаются небольшим сроком годности
-                </p>
-                <img src="./assets/images/vk.svg" alt="vk">
-                <img src="./assets/images/tg.svg" alt="telegram">
-            </div>
-            <div class="footer__column">
-                <h1 class="footer__column__h1">НАВИГАЦИЯ</h1>
-                <nav class="footer__column__refContainer">
-                    <a href="#top" class="footer__column__refContainer__ref">Главная</a>
-                    <a href="#catalog" class="footer__column__refContainer__ref">Каталог</a>
-                    <a href="#about" class="footer__column__refContainer__ref">О заводе</a>
-                    <a href="#toBuy" class="footer__column__refContainer__ref">Где купить</a>
-                    <a href="#vacancies" class="footer__column__refContainer__ref">Вакансии</a>
-                    <a href="#contacts" class="footer__column__refContainer__ref">Контакты</a>
-                </nav>
-            </div>
-            <div class="footer__column">
-                <h1 class="footer__column__h1">ПРОДУКЦИЯ</h1>
-                <div class="footer__column__refContainer">
-                    <p class="footer__column__refContainer__ref">Айран</p>
-                    <p class="footer__column__refContainer__ref">Мацони</p>
-                    <p class="footer__column__refContainer__ref">Сыры</p>
-                    <p class="footer__column__refContainer__ref">Молоко</p>
-                    <p class="footer__column__refContainer__ref">Кефир</p>
-                    <p class="footer__column__refContainer__ref">Ряженка</p>
-                    <p class="footer__column__refContainer__ref" style="color: green;">Смотреть все</p>
-                </div>
-            </div>
-            <div class="footer__column">
-                <h1 class="footer__column__h1">
-                    КОНТАКТЫ
-                </h1>
-                <div class="footer__column__refContainer">
-                    <div>
-                        <b>Адрес</b>
-                        <p class="footer__column__text">г. Майкоп, ул. Транспортная, 5</p>
-                    </div>
-                    <div>
-                        <b>Приемная</b>
-                        <p class="footer__column__text">+7 (8772) 53 68 73</p>
-                        <p class="footer__column__text">info@molkom-adyg.ru</p>
-                    </div>
-                    <div>
-                        <b>Отдел продаж</b>
-                        <p class="footer__column__text">+7 (8772) 56 95 20 <br>
-                            +7 (8772) 53 06 46
-                        </p>
-                        <p class="footer__column__text">otdelprod@molkom-adyg.ru</p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__foot">
-                <div class="footer__foot__compression">
-                    <img src="./assets/images/232 1.svg" alt="ГОСТ">
-                    <p>
-                        без добавления <br>
-                        сухого молока
-                    </p>
-                </div>
-                <div class="footer__foot__noncompression">
-                    ЗАО «Молкомбинат "Адыгейский"» © 2023
-                </div>
-            </div>
-        </footer>
-    </div>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=2f864594-f0ad-4759-9b21-0bf8d2f378d3&lang=ru_RU"></script>
+    <footer class="footer">
+      <div class="footer__column">
+        <img src="./assets/images/logo.svg" alt="logo" class="footer__column__img">
+        <h1 class="footer__column__h1">
+          ЗАО «Молкомбинат «Адыгейский»
+        </h1>
+        <p class="footer__column__text">
+          Мы готовы предложить вам традиционные продукты под торговой маркой «Майкопская молочная продукция»:
+          молоко, кефир, сметана, творог, ряженка, айран, которые отличаются небольшим сроком годности
+        </p>
+        <img src="./assets/images/vk.svg" alt="vk">
+        <img src="./assets/images/tg.svg" alt="telegram">
+      </div>
+      <div class="footer__column">
+        <h1 class="footer__column__h1">НАВИГАЦИЯ</h1>
+        <nav class="footer__column__refContainer">
+          <a href="#top" class="footer__column__refContainer__ref">Главная</a>
+          <a href="#catalog" class="footer__column__refContainer__ref">Каталог</a>
+          <a href="#about" class="footer__column__refContainer__ref">О заводе</a>
+          <a href="#toBuy" class="footer__column__refContainer__ref">Где купить</a>
+          <a href="#vacancies" class="footer__column__refContainer__ref">Вакансии</a>
+          <a href="#contacts" class="footer__column__refContainer__ref">Контакты</a>
+        </nav>
+      </div>
+      <div class="footer__column">
+        <h1 class="footer__column__h1">ПРОДУКЦИЯ</h1>
+        <div class="footer__column__refContainer">
+          <p class="footer__column__refContainer__ref">Айран</p>
+          <p class="footer__column__refContainer__ref">Мацони</p>
+          <p class="footer__column__refContainer__ref">Сыры</p>
+          <p class="footer__column__refContainer__ref">Молоко</p>
+          <p class="footer__column__refContainer__ref">Кефир</p>
+          <p class="footer__column__refContainer__ref">Ряженка</p>
+          <p class="footer__column__refContainer__ref" style="color: green;">Смотреть все</p>
+        </div>
+      </div>
+      <div class="footer__column">
+        <h1 class="footer__column__h1">
+          КОНТАКТЫ
+        </h1>
+        <div class="footer__column__refContainer">
+          <div>
+            <b>Адрес</b>
+            <p class="footer__column__text">г. Майкоп, ул. Транспортная, 5</p>
+          </div>
+          <div>
+            <b>Приемная</b>
+            <p class="footer__column__text">+7 (8772) 53 68 73</p>
+            <p class="footer__column__text">info@molkom-adyg.ru</p>
+          </div>
+          <div>
+            <b>Отдел продаж</b>
+            <p class="footer__column__text">+7 (8772) 56 95 20 <br>
+              +7 (8772) 53 06 46
+            </p>
+            <p class="footer__column__text">otdelprod@molkom-adyg.ru</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__foot">
+        <div class="footer__foot__compression">
+          <img src="./assets/images/232 1.svg" alt="ГОСТ">
+          <p>
+            без добавления <br>
+            сухого молока
+          </p>
+        </div>
+        <div class="footer__foot__noncompression">
+          ЗАО «Молкомбинат "Адыгейский"» © 2023
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=2f864594-f0ad-4759-9b21-0bf8d2f378d3&lang=ru_RU"></script>
 </body>
 
 </html>

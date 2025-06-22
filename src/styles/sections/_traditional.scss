@@ -1,101 +1,222 @@
 @use '../components/mixins' as *;
 
-.sectionTraditional{
-    height: 650px;
-    // left: 16px;
-    border-radius: 60px;
-    background: #76B72A;
-    color: white;
-    margin: 2%;
-    width: 96%;
-    display: flex;
-    columns: 2;
-    align-items: center;
-    justify-content: center;
+.section-traditional {
+  position: relative;
+  min-height: 600px;
+  border-radius: 60px;
+  background: #76B72A;
+  color: white;
+  margin: 2rem auto;
+  width: 96%;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  padding: 4rem;
+  overflow: hidden;
+
+  &__bg-images {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &__bg-image {
+    position: absolute;
+    height: 80%;
+    max-height: 500px;
+    object-fit: contain;
+    bottom: 0;
+
+    &--front {
+      right: 10%;
+      z-index: 2;
+    }
+
+    &--back {
+      right: 20%;
+      z-index: 1;
+      opacity: 0.8;
+    }
+  }
+
+  &__content {
     position: relative;
-    overflow: hidden;
+    z-index: 3;
+    width: 50%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 
-    
-    &__container{
-        width: 550px;
-        height: auto;
-        min-height: 330px;
-        top: 80px;
-        left: 346px;
-        gap: 36px;
-        
-        
-        &__h1{
-            @include h1;
-            margin-bottom: 3vw;
-            font-size: 38px;
-            
-        }
-        
-        &__text{
-            @include text;
-            margin-bottom: 3vw;
-        }
-        
-        &__blockContainer {
-            width: 100%;
-            display: flex;
-            color: black;
-            gap: 20px;
-            justify-content: space-between;
-      
-            &__block {
-                width: 125px;
-                height: 140px;
-                background: white;
-                flex-shrink: 0; 
-                border-radius: 25px;
-                text-align: center;
-                display: grid;
-                align-items: center;
-                position: relative;
-                overflow: hidden;
-                
-            }
+  &__title {
+    @include h1;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
 
-            &__blockW{
-                width: 250px;
-                height: 140px;
-                background: white;
-                flex-shrink: 0; 
-                border-radius: 25px;
-                text-align: center;
-                display: grid;
-                align-items: center;
-                position: relative;
-                overflow: hidden;
-            }
-        }
-    }
-    
-    &__containerImg {
-        position: relative;
-        width: 550px;
-        height: 100%;
-        min-height: 400px;
-    
-        img {
-          position: absolute;
-          max-width: 400px;
-          height: 75%;
-          object-fit: contain;
-        }
+  &__text {
+    @include text;
+    line-height: 1.5;
+    max-width: 90%;
+  }
+}
+
+.benefits-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 2;
+  flex-wrap: wrap;
+}
+
+.benefits-item {
+  background: white;
+  border-radius: 20px;
+  color: #2a2a2a;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
+  min-height: 100px;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+    object-fit: contain;
+  }
+
+  &__text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+}
+
+// Адаптивные стили
+@media (max-width: 1200px) {
+  .section-traditional {
+    &__bg-image {
+      height: 75%;
+
+      &--front {
+        right: 5%;
       }
-    
-      &__imageFront {
-        z-index: 2;
-        left: 50px;
-        bottom: 0;
-      }
-    
-      &__imageBack {
-        z-index: 1;
-        right: 50px;
-        bottom: 0;
+
+      &--back {
+        right: 15%;
       }
     }
+  }
+}
+
+@media (max-width: 992px) {
+  .section-traditional {
+    min-height: 500px;
+
+    &__content {
+      width: 60%;
+    }
+
+    &__bg-images {
+      width: 40%;
+    }
+
+    &__bg-image {
+      height: 70%;
+    }
+  }
+
+  .benefits-item {
+    min-width: 100px;
+    min-height: 90px;
+    padding: 0.8rem;
+
+    &__icon {
+      width: 35px;
+      height: 35px;
+    }
+
+    &__text {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section-traditional {
+    flex-direction: column;
+    min-height: auto;
+    padding: 2.5rem 2rem;
+    text-align: center;
+
+    &__content {
+      width: 100%;
+      max-width: none;
+      align-items: center;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+
+    &__bg-images {
+      display: none;
+    }
+  }
+
+  .benefits-row {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .benefits-item {
+    flex: 0 0 calc(33.333% - 1rem);
+    min-width: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-traditional {
+    margin: 1rem auto;
+    width: 94%;
+    border-radius: 40px;
+    padding: 2rem 1.5rem;
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+
+  .benefits-item {
+    flex: 0 0 calc(50% - 0.5rem);
+    min-height: 80px;
+    padding: 0.7rem;
+
+    &__icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    &__text {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .benefits-item {
+    flex: 0 0 100%;
+    min-height: 70px;
+  }
+}

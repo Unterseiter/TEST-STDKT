@@ -3,88 +3,88 @@ $tablet-breakpoint: 768px;
 $mobile-breakpoint: 480px;
 
 @mixin h1 {
-    font-family: Clip;
-    font-weight: 400;
-    font-size: 45px;
-    line-height: 120%;
-    letter-spacing: 2%;
-    vertical-align: middle;
+  font-family: Clip;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 120%;
+  letter-spacing: 2%;
+  vertical-align: middle;
 }
 
 @mixin h2 {
-    font-family: Clip ;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 120%;
-    letter-spacing: 2%;
-    vertical-align: middle;
+  font-family: Clip;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: 2%;
+  vertical-align: middle;
 
 
 }
 
-@mixin text{
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0%;
-    vertical-align: middle;
+@mixin text {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  vertical-align: middle;
 
 }
 
 $baseColor: #76B72A;
 
 @mixin fade-transition {
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-@mixin buttonGreen{
-    width: 155px;
-    height: 52px;
-    gap: 8px;
-    border-radius: 100px;
-    padding-right: 32px;
-    padding-left: 32px;
-    background-color: $baseColor;
-    cursor: pointer;
+@mixin buttonGreen {
+  width: 155px;
+  height: 52px;
+  gap: 8px;
+  border-radius: 100px;
+  padding-right: 32px;
+  padding-left: 32px;
+  background-color: $baseColor;
+  cursor: pointer;
 
-    &--active{
-        background: color.adjust($baseColor, $lightness: -10%);
-    }
+  &--active {
+    background: color.adjust($baseColor, $lightness: -10%);
+  }
 }
 
-@mixin buttonTransparent{
-    width: 207px;
-    height: 52px;
-    gap: 8px;
-    border-radius: 100px;
-    border-width: 1px;
-    border: 1px solid ;
-    cursor: pointer;
-    background: transparent;
+@mixin buttonTransparent {
+  width: 207px;
+  height: 52px;
+  gap: 8px;
+  border-radius: 100px;
+  border-width: 1px;
+  border: 1px solid;
+  cursor: pointer;
+  background: transparent;
 }
 
 @mixin logo($size: 100px, $hover-effect: true) {
-    width: $size;
-    height: $size;
-    cursor: pointer;
-    object-fit: contain;
-    
-    @if $hover-effect {
-      transition: transform 0.2s ease;
-      
-      &:hover {
-        transform: scale(1.05);
-      }
-    }
-    
-    @media (max-width: $tablet-breakpoint) {
-      width: $size * 0.8;
-      height: $size * 0.8;
-    }
-    
-    @media (max-width: $mobile-breakpoint) {
-      width: $size * 0.6;
-      height: $size * 0.6;
+  width: $size;
+  height: $size;
+  cursor: pointer;
+  object-fit: contain;
+
+  @if $hover-effect {
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.05);
     }
   }
+
+  @media (max-width: $tablet-breakpoint) {
+    width: $size * 0.8;
+    height: $size * 0.8;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    width: $size * 0.6;
+    height: $size * 0.6;
+  }
+}
